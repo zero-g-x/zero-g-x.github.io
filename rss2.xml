@@ -9,23 +9,26 @@
     <atom:link href="zerocath.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>水穷行到处，云起坐看时</description>
-    <pubDate>Tue, 08 Sep 2020 09:35:02 GMT</pubDate>
+    <pubDate>Wed, 09 Sep 2020 06:28:56 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>Hello World</title>
+      <title></title>
       <link>zerocath.com/2020/09/08/hello-world/</link>
       <guid>zerocath.com/2020/09/08/hello-world/</guid>
       <pubDate>Tue, 08 Sep 2020 07:18:22 GMT</pubDate>
       
         
         
-      <description>&lt;h2 id=&quot;Welcome-to-zerocath&quot;&gt;&lt;a href=&quot;#Welcome-to-zerocath&quot; class=&quot;headerlink&quot; title=&quot;Welcome to  zerocath?&quot;&gt;&lt;/a&gt;Welcome to  &lt;em&gt;zerocath?&lt;/</description>
+      <description>&lt;p&gt;title: Hello World&lt;/p&gt;
+&lt;p&gt;Welcome to  zerocath &lt;/p&gt;
+&lt;p&gt;g(x)的个人小站，记录学习内容与感悟&lt;/p&gt;
+</description>
         
       
       
       
-      <content:encoded><![CDATA[<h2 id="Welcome-to-zerocath"><a href="#Welcome-to-zerocath" class="headerlink" title="Welcome to  zerocath?"></a>Welcome to  <em>zerocath?</em></h2><p>g(x)的个人小站，记录学习内容与感悟</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>title: Hello World</p><p>Welcome to  zerocath </p><p>g(x)的个人小站，记录学习内容与感悟</p>]]></content:encoded>
       
       
       
