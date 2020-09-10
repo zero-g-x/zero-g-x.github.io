@@ -9,8 +9,60 @@
     <atom:link href="zerocath.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>水穷行到处，云起坐看时</description>
-    <pubDate>Thu, 10 Sep 2020 01:33:06 GMT</pubDate>
+    <pubDate>Thu, 10 Sep 2020 08:53:34 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>C++学习笔记</title>
+      <link>zerocath.com/2020/09/10/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <guid>zerocath.com/2020/09/10/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <pubDate>Thu, 10 Sep 2020 02:44:39 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;参考：C++ Primer中文版（第5版） 电子工业出版社&lt;/p&gt;
+&lt;h1 id=&quot;变量和类型&quot;&gt;&lt;a href=&quot;#变量和类型&quot; class=&quot;headerlink&quot; title=&quot;变量和类型&quot;&gt;&lt;/a&gt;变量和类型&lt;/h1&gt;&lt;h2 id=&quot;内置基本类型&quot;&gt;&lt;a href=</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p>参考：C++ Primer中文版（第5版） 电子工业出版社</p><h1 id="变量和类型"><a href="#变量和类型" class="headerlink" title="变量和类型"></a>变量和类型</h1><h2 id="内置基本类型"><a href="#内置基本类型" class="headerlink" title="内置基本类型"></a>内置基本类型</h2><ul><li><p>算术类型 </p><p>  arithmetic type————整型、浮点型</p></li><li><p>空类型</p><p>  void</p></li></ul><h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><ul><li></li></ul>]]></content:encoded>
+      
+      
+      <category domain="zerocath.com/categories/%E7%AC%94%E8%AE%B0%E6%9C%AC/">笔记本</category>
+      
+      
+      <category domain="zerocath.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</category>
+      
+      <category domain="zerocath.com/tags/Cpp/">Cpp</category>
+      
+      <category domain="zerocath.com/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">面向对象</category>
+      
+      
+      <comments>zerocath.com/2020/09/10/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>数据结构学习笔记</title>
+      <link>zerocath.com/2020/09/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <guid>zerocath.com/2020/09/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <pubDate>Thu, 10 Sep 2020 02:35:41 GMT</pubDate>
+      
+      
+      
+      
+      <category domain="zerocath.com/categories/%E7%AC%94%E8%AE%B0%E6%9C%AC/">笔记本</category>
+      
+      
+      <category domain="zerocath.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</category>
+      
+      <category domain="zerocath.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</category>
+      
+      
+      <comments>zerocath.com/2020/09/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Hello-Kitty!</title>
