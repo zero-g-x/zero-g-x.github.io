@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"zerocath.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="参考：  数据结构：C语言版&#x2F;严蔚敏，吴伟民编著·———北京：清华大学出版社，1997.4   绪论概念术语 数据   能输入到计算机并被处理的符号的总称  数据元素  数据的基本单位 可由若干数据项组成 数据项：数据的不可分割的最小单位     数据对象  性质相同的数据元素的集合，是数据的子集  数据结构   相互之间存在一种或多种特定关系的数据元素的集合   逻辑关系&#x2F;结构：    - 集合">
+  <meta name="description" content="�ο���  ���ݽṹ��C���԰�&#x2F;��ε������ΰ��������������������廪��ѧ�����磬1997.4   ������������ ����   �����뵽��������������ķ��ŵ��ܳ�  ����Ԫ��  ���ݵĻ�����λ ����������������� ��������ݵĲ��ɷָ����С��λ     ���ݶ���  ����">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据结构学习笔记">
+<meta property="og:title" content="���ݽṹѧϰ�ʼ�">
 <meta property="og:url" content="zerocath.com/2020/09/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="ZEROCATH">
-<meta property="og:description" content="参考：  数据结构：C语言版&#x2F;严蔚敏，吴伟民编著·———北京：清华大学出版社，1997.4   绪论概念术语 数据   能输入到计算机并被处理的符号的总称  数据元素  数据的基本单位 可由若干数据项组成 数据项：数据的不可分割的最小单位     数据对象  性质相同的数据元素的集合，是数据的子集  数据结构   相互之间存在一种或多种特定关系的数据元素的集合   逻辑关系&#x2F;结构：    - 集合">
+<meta property="og:description" content="�ο���  ���ݽṹ��C���԰�&#x2F;��ε������ΰ��������������������廪��ѧ�����磬1997.4   ������������ ����   �����뵽��������������ķ��ŵ��ܳ�  ����Ԫ��  ���ݵĻ�����λ ����������������� ��������ݵĲ��ɷָ����С��λ     ���ݶ���  ����">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-10T02:35:41.000Z">
-<meta property="article:modified_time" content="2020-09-24T16:29:02.000Z">
+<meta property="article:modified_time" content="2020-10-20T08:28:02.000Z">
 <meta property="article:author" content="g(x)">
-<meta property="article:tag" content="学习笔记">
-<meta property="article:tag" content="数据结构">
-<meta property="article:tag" content="类C语言">
+<meta property="article:tag" content="���ݽṹ">
+<meta property="article:tag" content="ѧϰ�ʼ�">
+<meta property="article:tag" content="��C����">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="zerocath.com/2020/09/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title>数据结构学习笔记 | ZEROCATH</title>
+  <title>���ݽṹѧϰ�ʼ� | ZEROCATH</title>
   
 
 
@@ -187,7 +187,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          数据结构学习笔记
+          ���ݽṹѧϰ�ʼ�
         </h1>
 
         <div class="post-meta">
@@ -204,7 +204,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-09-25 00:29:02" itemprop="dateModified" datetime="2020-09-25T00:29:02+08:00">2020-09-25</time>
+                <time title="修改时间：2020-10-20 16:28:02" itemprop="dateModified" datetime="2020-10-20T16:28:02+08:00">2020-10-20</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -234,108 +234,179 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>参考：</p>
+        <p>�ο���</p>
 <ul>
-<li>数据结构：C语言版/严蔚敏，吴伟民编著·———北京：清华大学出版社，1997.4 </li>
+<li>���ݽṹ��C���԰�/��ε������ΰ��������������������廪��ѧ�����磬1997.4 </li>
 </ul>
-<h1 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h1><h2 id="概念术语"><a href="#概念术语" class="headerlink" title="概念术语"></a>概念术语</h2><ul>
-<li><p>数据</p>
-<p>  能输入到计算机并被处理的符号的总称</p>
+<h1 id="����"><a href="#����" class="headerlink" title="����"></a>����</h1><h2 id="��������"><a href="#��������" class="headerlink" title="��������"></a>��������</h2><ul>
+<li><p>����</p>
+<p>  �����뵽��������������ķ��ŵ��ܳ�</p>
 </li>
-<li><p>数据元素</p>
+<li><p>����Ԫ��</p>
 <ul>
-<li>数据的基本单位</li>
-<li>可由若干数据项组成<ul>
-<li>数据项：数据的不可分割的最小单位</li>
+<li>���ݵĻ�����λ</li>
+<li>�����������������<ul>
+<li>��������ݵĲ��ɷָ����С��λ</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>数据对象<br>  性质相同的数据元素的集合，是数据的子集</p>
+<li><p>���ݶ���<br>  ������ͬ������Ԫ�صļ��ϣ������ݵ��Ӽ�</p>
 </li>
-<li><p>数据结构</p>
-<p>  相互之间存在一种或多种特定关系的数据元素的集合</p>
+<li><p>���ݽṹ</p>
+<p>  �໥֮�����һ�ֻ�����ض���ϵ������Ԫ�صļ���</p>
 </li>
 </ul>
-<p>逻辑关系/结构：<br>    - 集合：结构中的元素除了同属一个集合外无其他关系<br>    - 线性结构：数据元素存在一个对一个的关系<br>    - 树形结构：数据元素间存在一个对多个的关系<br>    - 图/网装结构：数据元素间存在多个对多个的关系</p>
-<p>物理结构/存储结构：数据结构在计算机中的表示</p>
-<pre><code>- 顺序存储结构：分配空间连续，eg.向量、一维数组
-- 链式存储结构：非顺序，分配空间不一定连续，eg.链表借助指示元素存储地址的指针表示数据元素间的逻辑关系
-- 索引数据结构：用附加的索引表标识节点地址,eg.目录
-- 哈希数据结构/散列结构：由节点的关键码值决定节点的存储位置</code></pre>
+<p>�߼���ϵ/�ṹ��<br>    - ���ϣ��ṹ�е�Ԫ�س���ͬ��һ����������������ϵ<br>    - ���Խṹ������Ԫ�ش���һ����һ���Ĺ�ϵ<br>    - ���νṹ������Ԫ�ؼ����һ���Զ���Ĺ�ϵ<br>    - ͼ/��װ�ṹ������Ԫ�ؼ���ڶ���Զ���Ĺ�ϵ</p>
+<p>�����ṹ/�洢�ṹ�����ݽṹ�ڼ�����еı�ʾ</p>
+<pre><code>- ˳��洢�ṹ������ռ�������eg.������һά����
+- ��ʽ�洢�ṹ����˳�򣬷���ռ䲻һ��������eg.��������ָʾԪ�ش洢��ַ��ָ���ʾ����Ԫ�ؼ���߼���ϵ
+- �������ݽṹ���ø��ӵ���������ʶ�ڵ��ַ,eg.Ŀ¼
+- ��ϣ���ݽṹ/ɢ�нṹ���ɽڵ�Ĺؼ���ֵ�����ڵ�Ĵ洢λ��</code></pre>
 <ul>
-<li><p>数据类型：一个值的集合和定义在这个值集上的一组操作的总称</p>
+<li><p>�������ͣ�һ��ֵ�ļ��ϺͶ��������ֵ���ϵ�һ��������ܳ�</p>
 <ul>
-<li><p>原子类型</p>
-<p>  不可分解的、非结构的。eg.int char</p>
+<li><p>ԭ������</p>
+<p>  ���ɷֽ�ġ��ǽṹ�ġ�eg.int char</p>
 </li>
-<li><p>结构类型</p>
-<p>  由若干成分按某种结构组成</p>
+<li><p>�ṹ����</p>
+<p>  �����ɳɷְ�ĳ�ֽṹ���</p>
 </li>
 </ul>
 </li>
-<li><p>抽象数据类型<br>ADT abstract data type，一个数学模型以及定义在其上的一组操作，定义仅取决于它的一组逻辑特性，与其在计算机内部的表示与如何实现无关。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ADT 抽象数据类型名&#123;</span><br><span class="line">    数据对象：&lt;定义&gt;</span><br><span class="line">    数据关系：&lt;定义&gt;</span><br><span class="line">    基本操作：&lt;定义&gt;</span><br><span class="line">&#125;ADT 抽象数据类型名</span><br><span class="line"></span><br><span class="line">基本操作名&lt;参数表&gt;</span><br><span class="line">  初始条件：&lt;初始条件描述&gt;</span><br><span class="line">  操作结果：&lt;操作结果描述&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="算法和算法分析："><a href="#算法和算法分析：" class="headerlink" title="算法和算法分析："></a>算法和算法分析：</h2></li>
-<li><p>算法：对特定问题求解步骤的一种描述，它是指令的有限序列，其中每一条指令表示一个或多个操作。</p>
+<li><p>������������<br>ADT abstract data type��һ����ѧģ���Լ����������ϵ�һ������������ȡ��������һ���߼����ԣ������ڼ�����ڲ��ı�ʾ�����ʵ���޹ء�</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ADT ��������������&#123;</span><br><span class="line">    ���ݶ���&lt;����&gt;</span><br><span class="line">    ���ݹ�ϵ��&lt;����&gt;</span><br><span class="line">    ����������&lt;����&gt;</span><br><span class="line">&#125;ADT ��������������</span><br><span class="line"></span><br><span class="line">����������&lt;������&gt;</span><br><span class="line">  ��ʼ������&lt;��ʼ��������&gt;</span><br><span class="line">  ���������&lt;�����������&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="�㷨���㷨������"><a href="#�㷨���㷨������" class="headerlink" title="�㷨���㷨������"></a>�㷨���㷨������</h2></li>
+<li><p>�㷨�����ض�������ⲽ���һ������������ָ����������У�����ÿһ��ָ���ʾһ������������</p>
 <ul>
-<li>有穷性，确定性，可行性，输入，输出</li>
-<li>设计要求：正确性，可读性，健壮性，效率与低存储量需求</li>
+<li>�����ԣ�ȷ���ԣ������ԣ����룬���</li>
+<li>���Ҫ����ȷ�ԣ��ɶ��ԣ���׳�ԣ�Ч����ʹ洢������</li>
 </ul>
 </li>
-<li><p>算法分析</p>
-<p>  时间复杂度，空间复杂度，稳定性</p>
-<h1 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h1><h2 id="类型定义"><a href="#类型定义" class="headerlink" title="类型定义"></a>类型定义</h2></li>
-<li><p>相邻数据元素间存在序偶关系</p>
+<li><p>�㷨����</p>
+<p>  ʱ�临�Ӷȣ��ռ临�Ӷȣ��ȶ���</p>
+<h1 id="���Ա�"><a href="#���Ա�" class="headerlink" title="���Ա�"></a>���Ա�</h1><h2 id="���Ͷ���"><a href="#���Ͷ���" class="headerlink" title="���Ͷ���"></a>���Ͷ���</h2></li>
+<li><p>��������Ԫ�ؼ������ż��ϵ</p>
 </li>
-<li><p>前驱、后继元素</p>
+<li><p>ǰ�������Ԫ��</p>
 </li>
-<li><p>线性表长度：元素的个数</p>
-<h2 id="顺序表示和实现"><a href="#顺序表示和实现" class="headerlink" title="顺序表示和实现"></a>顺序表示和实现</h2><p>将线性表的数据元素依次存放在计算机存储器中一组地址连续的存储单元中，得到顺序存储结构或向量</p>
+<li><p>���Ա����ȣ�Ԫ�صĸ���</p>
+<h2 id="˳���ʾ��ʵ��"><a href="#˳���ʾ��ʵ��" class="headerlink" title="˳���ʾ��ʵ��"></a>˳���ʾ��ʵ��</h2><p>�����Ա�������Ԫ�����δ���ڼ�����洢����һ���ַ�����Ĵ洢��Ԫ�У��õ�˳��洢�ṹ������</p>
 </li>
-<li><p>静态分配</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> maxleng 100</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElemType elem[maxleng];<span class="comment">//下标：0,1...,maxleng-1</span></span><br><span class="line">    <span class="keyword">int</span> length;<span class="comment">//表长</span></span><br><span class="line">&#125;SqList;<span class="comment">//结构类型名</span></span><br><span class="line">Sqlist La;<span class="comment">//结构类型变量名</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<li><p>��̬����</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> maxleng 100</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElemType elem[maxleng];<span class="comment">//�±꣺0,1...,maxleng-1</span></span><br><span class="line">    <span class="keyword">int</span> length;<span class="comment">//����</span></span><br><span class="line">&#125;SqList;<span class="comment">//�ṹ������</span></span><br><span class="line">Sqlist La;<span class="comment">//�ṹ���ͱ�����</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <ul>
-<li>指针 *,用-&gt;指向结构中的元素</li>
-<li>引用参数，用.</li>
+<li>ָ�� *,��-&gt;ָ��ṹ�е�Ԫ��</li>
+<li>���ò�������.</li>
 </ul>
 </li>
-<li><p>动态分配</p>
+<li><p>��̬����</p>
 <ul>
-<li><p>引用参数</p>
+<li><p>���ò���</p>
 </li>
-<li><p>realloc函数</p>
-<p>  extern void *realloc(void *mem_address, unsigned int newsize);#include &lt;stdlib.h&gt; 有些编译器需要#include &lt;malloc.h&gt;，在TC2.0中可以使用alloc.h头文件.先判断当前的指针是否有足够的连续空间，如果有，扩大mem_address指向的地址，并且将mem_address返回，如果空间不够，先按照newsize指定的大小分配空间，将原有数据从头到尾拷贝到新分配的内存区域，而后释放原来mem_address所指内存区域（注意：原来指针是自动释放，不需要使用free），同时返回新分配的内存区域的首地址。即重新分配存储器块的地址。返回值：如果重新分配成功则返回指向被分配内存的指针，否则返回空指针NULL。</p>
-</li>
-</ul>
+<li><p>realloc����</p>
+<p>  extern void *realloc(void *mem_address, unsigned int newsize);#include &lt;stdlib.h&gt; ��Щ��������Ҫ#include &lt;malloc.h&gt;����TC2.0�п���ʹ��alloc.hͷ�ļ�.���жϵ�ǰ��ָ���Ƿ����㹻�������ռ䣬����У�����mem_addressָ��ĵ�ַ�����ҽ�mem_address���أ�����ռ䲻�����Ȱ���newsizeָ���Ĵ�С����ռ䣬��ԭ�����ݴ�ͷ��β�������·�����ڴ����򣬶����ͷ�ԭ��mem_address��ָ�ڴ�����ע�⣺ԭ��ָ�����Զ��ͷţ�����Ҫʹ��free����ͬʱ�����·�����ڴ�������׵�ַ�������·���洢����ĵ�ַ������ֵ��������·���ɹ��򷵻�ָ�򱻷����ڴ��ָ�룬���򷵻ؿ�ָ��NULL��</p>
 </li>
 </ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LIST_INIT_SIZE 100 <span class="comment">//初始表厂</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LIST_INCRESEMENT 10 <span class="comment">//每次增加的增量</span></span></span><br><span class="line">tyedef <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    Elem_Type *elem;<span class="comment">//存储空间的基地址</span></span><br><span class="line">    <span class="keyword">int</span> length;<span class="comment">//表长</span></span><br><span class="line">    <span class="keyword">int</span> listsize;<span class="comment">//当前分配的存储容量</span></span><br><span class="line">&#125; Sqlist1;</span><br><span class="line">Sqlist1 Lb;</span><br><span class="line"><span class="comment">//构造空线性表L</span></span><br><span class="line"><span class="function">Status <span class="title">initList_Sq</span><span class="params">(Sqlist1 &amp;L)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    L.elem = (Elem_Type *)<span class="built_in">malloc</span>(LIST_INIT_SIZE*<span class="keyword">sizeof</span>(Elem_Type));</span><br><span class="line">    <span class="keyword">if</span>(!L.elem)<span class="built_in">exit</span>(OVERFLOW);</span><br><span class="line">    L.length=<span class="number">0</span>;<span class="comment">//空表长度为0</span></span><br><span class="line">    L.listsize=LIST_INIT_SIZE;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">int</span> <span class="title">Insert3</span><span class="params">(SqList &amp;L,<span class="keyword">int</span> i, ElemType e)</span></span></span><br><span class="line"><span class="function">  </span>&#123;<span class="keyword">int</span> j;</span><br><span class="line">   <span class="keyword">if</span> (i&lt;<span class="number">1</span> || i&gt;L.length+<span class="number">1</span>)     <span class="comment">//i的合法取值为1至n+1</span></span><br><span class="line">          <span class="keyword">return</span> ERROR; </span><br><span class="line">   <span class="keyword">if</span> (L.length&gt;=L.listsize)    <span class="comment">/*溢出时扩充*/</span></span><br><span class="line">	  &#123; </span><br><span class="line">     ElemType *newbase;</span><br><span class="line">     newbase=(ElemType *) <span class="built_in">realloc</span>(L.elem,</span><br><span class="line">		(L.listsize+LISTINCREMENT)*<span class="keyword">sizeof</span>(ElemType));</span><br><span class="line">	  <span class="keyword">if</span> (newbase==<span class="literal">NULL</span>) <span class="keyword">return</span> OVERFLOW;   <span class="comment">//扩充失败</span></span><br><span class="line">     L.elem=newbase;</span><br><span class="line">     L.listsize+=LISTINCREMENT;</span><br><span class="line">	  &#125;</span><br><span class="line"><span class="comment">//向后移动元素，空出第i个元素的分量elem[i-1]</span></span><br><span class="line"><span class="keyword">for</span>(j=L.length<span class="number">-1</span>;j&gt;=i<span class="number">-1</span>;j--)</span><br><span class="line">	L.elem[j+<span class="number">1</span>]=L.elem[j];</span><br><span class="line">L.elem[i<span class="number">-1</span>]=e;                   <span class="comment">/*新元素插入*/</span></span><br><span class="line">L.length++;                      <span class="comment">/*线性表长度加1*/</span></span><br><span class="line"><span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="链式表示和实现"><a href="#链式表示和实现" class="headerlink" title="链式表示和实现"></a>链式表示和实现</h2><p>有无头结点</p>
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LIST_INIT_SIZE 100 <span class="comment">//��ʼ����</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LIST_INCRESEMENT 10 <span class="comment">//ÿ�����ӵ�����</span></span></span><br><span class="line">tyedef <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    Elem_Type *elem;<span class="comment">//�洢�ռ�Ļ���ַ</span></span><br><span class="line">    <span class="keyword">int</span> length;<span class="comment">//����</span></span><br><span class="line">    <span class="keyword">int</span> listsize;<span class="comment">//��ǰ����Ĵ洢����</span></span><br><span class="line">&#125; Sqlist1;</span><br><span class="line">Sqlist1 Lb;</span><br><span class="line"><span class="comment">//��������Ա�L</span></span><br><span class="line"><span class="function">Status <span class="title">initList_Sq</span><span class="params">(Sqlist1 &amp;L)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    L.elem = (Elem_Type *)<span class="built_in">malloc</span>(LIST_INIT_SIZE*<span class="keyword">sizeof</span>(Elem_Type));</span><br><span class="line">    <span class="keyword">if</span>(!L.elem)<span class="built_in">exit</span>(OVERFLOW);</span><br><span class="line">    L.length=<span class="number">0</span>;<span class="comment">//�ձ�����Ϊ0</span></span><br><span class="line">    L.listsize=LIST_INIT_SIZE;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">int</span> <span class="title">Insert3</span><span class="params">(SqList &amp;L,<span class="keyword">int</span> i, ElemType e)</span></span></span><br><span class="line"><span class="function">  </span>&#123;<span class="keyword">int</span> j;</span><br><span class="line">   <span class="keyword">if</span> (i&lt;<span class="number">1</span> || i&gt;L.length+<span class="number">1</span>)     <span class="comment">//i�ĺϷ�ȡֵΪ1��n+1</span></span><br><span class="line">          <span class="keyword">return</span> ERROR; </span><br><span class="line">   <span class="keyword">if</span> (L.length&gt;=L.listsize)    <span class="comment">/*���ʱ����*/</span></span><br><span class="line">	  &#123; </span><br><span class="line">     ElemType *newbase;</span><br><span class="line">     newbase=(ElemType *) <span class="built_in">realloc</span>(L.elem,</span><br><span class="line">		(L.listsize+LISTINCREMENT)*<span class="keyword">sizeof</span>(ElemType));</span><br><span class="line">	  <span class="keyword">if</span> (newbase==<span class="literal">NULL</span>) <span class="keyword">return</span> OVERFLOW;   <span class="comment">//����ʧ��</span></span><br><span class="line">     L.elem=newbase;</span><br><span class="line">     L.listsize+=LISTINCREMENT;</span><br><span class="line">	  &#125;</span><br><span class="line"><span class="comment">//����ƶ�Ԫ�أ��ճ���i��Ԫ�صķ���elem[i-1]</span></span><br><span class="line"><span class="keyword">for</span>(j=L.length<span class="number">-1</span>;j&gt;=i<span class="number">-1</span>;j--)</span><br><span class="line">	L.elem[j+<span class="number">1</span>]=L.elem[j];</span><br><span class="line">L.elem[i<span class="number">-1</span>]=e;                   <span class="comment">/*��Ԫ�ز���*/</span></span><br><span class="line">L.length++;                      <span class="comment">/*���Ա����ȼ�1*/</span></span><br><span class="line"><span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="��ʽ��ʾ��ʵ��"><a href="#��ʽ��ʾ��ʵ��" class="headerlink" title="��ʽ��ʾ��ʵ��"></a>��ʽ��ʾ��ʵ��</h2><p>����ͷ���</p>
 <ul>
-<li>单链表创建<ul>
-<li>先进先出</li>
-<li>先进后出</li>
+<li>����������<ul>
+<li>�Ƚ��ȳ�</li>
+<li>�Ƚ����</li>
 </ul>
 </li>
-<li>单链表读取</li>
-<li>单链表插入</li>
-<li>单链表删除</li>
+<li>��������ȡ</li>
+<li>����������</li>
+<li>������ɾ��</li>
 </ul>
-<h3 id="静态链表"><a href="#静态链表" class="headerlink" title="静态链表"></a>静态链表</h3><h3 id="循环链表"><a href="#循环链表" class="headerlink" title="循环链表"></a>循环链表</h3><h1 id="栈和队列"><a href="#栈和队列" class="headerlink" title="栈和队列"></a>栈和队列</h1><h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><ul>
-<li>只在表尾(栈顶top)进行插入、删除操作的线性表</li>
-<li>线性栈<h3 id="链式栈"><a href="#链式栈" class="headerlink" title="链式栈"></a>链式栈</h3></li>
-<li>将新结点作为首结点，出栈时删除首结点</li>
+<h3 id="��̬����"><a href="#��̬����" class="headerlink" title="��̬����"></a>��̬����</h3><h3 id="ѭ������"><a href="#ѭ������" class="headerlink" title="ѭ������"></a>ѭ������</h3><h1 id="ջ�Ͷ���"><a href="#ջ�Ͷ���" class="headerlink" title="ջ�Ͷ���"></a>ջ�Ͷ���</h1><h2 id="ջ"><a href="#ջ" class="headerlink" title="ջ"></a>ջ</h2><ul>
+<li>ֻ�ڱ�β(ջ��top)���в��롢ɾ�����������Ա�</li>
+<li>����ջ<h3 id="��ʽջ"><a href="#��ʽջ" class="headerlink" title="��ʽջ"></a>��ʽջ</h3></li>
+<li>���½����Ϊ�׽�㣬��ջʱɾ���׽��</li>
 </ul>
-<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><ul>
-<li>数制转换</li>
-<li>表达式括号匹配</li>
-<li>表达式求值</li>
+<h3 id="Ӧ��"><a href="#Ӧ��" class="headerlink" title="Ӧ��"></a>Ӧ��</h3><ul>
+<li>����ת��</li>
+<li>����ʽ����ƥ��</li>
+<li>����ʽ��ֵ</li>
 </ul>
-<h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><ul>
-<li>只允许在表的一端删除元素，在另一端插入元素</li>
+<h2 id="����-1"><a href="#����-1" class="headerlink" title="����"></a>����</h2><ul>
+<li>ֻ�����ڱ���һ��ɾ��Ԫ�أ�����һ�˲���Ԫ��</li>
 </ul>
-
+<h1 id="��"><a href="#��" class="headerlink" title="��"></a>��</h1><h1 id="��-1"><a href="#��-1" class="headerlink" title="��"></a>��</h1><h2 id="����-2"><a href="#����-2" class="headerlink" title="����"></a>����</h2><ul>
+<li>���Ķȣ�����������Ŀ</li>
+<li>���Ķȣ��������Ľ��Ķ�</li>
+<li>Ҷ�ӣ���Ϊ0</li>
+<li>��֧��㣺�Ȳ�Ϊ0</li>
+<li>���Ĳ㣺����ڵڼ���</li>
+<li>���ĸ߶ȣ����н������ֵ</li>
+</ul>
+<h3 id="������ʽ"><a href="#������ʽ" class="headerlink" title="������ʽ"></a>������ʽ</h3><ul>
+<li>�����</li>
+<li>Ƕ�׼���</li>
+</ul>
+<h2 id="������"><a href="#������" class="headerlink" title="������"></a>������</h2><h3 id="����-3"><a href="#����-3" class="headerlink" title="����"></a>����</h3><ul>
+<li>��i�������2^(i-1)�����</li>
+<li>��������</li>
+<li>��ȫ������<ul>
+<li>��i����㣬��С����2<em>i,��С����2</em>i+1</li>
+</ul>
+</li>
+</ul>
+<h3 id="����-4"><a href="#����-4" class="headerlink" title="����"></a>����</h3><h4 id="�ݹ�"><a href="#�ݹ�" class="headerlink" title="�ݹ�"></a>�ݹ�</h4><ul>
+<li>ǰ�к���<h4 id="�gݹ�"><a href="#�gݹ�" class="headerlink" title="�ǵݹ�"></a>�ǵݹ�</h4><ul>
+<li>����</li>
+</ul>
+</li>
+</ul>
+<p>����ָ��ǿ�����ջ��������������������������Ϊ��ʱ������ջ������ٷ������ҽ�㣬���ѭ��</p>
+<ul>
+<li>����</li>
+</ul>
+<p>��ָ������ջ��ѭ�����У����ڵ��ջ�������ҽ��ǿ�����ջ��������ڵ�ǿռ�����ջ���ٽ�����һ��ѭ����</p>
+<ul>
+<li>����</li>
+</ul>
+<p>������ջ��ѭ�����У��Ƚ���ڵ�ȫ����ջ��1.�����Ϊ��ĸ�������������Һ���ʱ�����ý���ջ������������ֵܣ����ֵ���ջ 2.�����Ϊ�Һ���ʱ��ֱ�ӳ�ջ</p>
+<h3 id="��������-1"><a href="#��������-1" class="headerlink" title="��������"></a>��������</h3><h4 id="�ݹ�-1"><a href="#�ݹ�-1" class="headerlink" title="�ݹ�"></a>�ݹ�</h4><p>���������ı���</p>
+<h4 id="�gݹ�-1"><a href="#�gݹ�-1" class="headerlink" title="�ǵݹ�"></a>�ǵݹ�</h4><ul>
+<li>���ø�����ֵ���������������еı��</li>
+</ul>
+<h3 id="����������"><a href="#����������" class="headerlink" title="����������"></a>����������</h3><ul>
+<li>�����������յ���ָ����ָ��ֱ��ǰ�����յ���ָ����ָ��ֱ�Ӻ�̣��ǿ�ָ�벻�䣨ǰ����̰�������������˳�����)</li>
+<li>�洢�ṹ������ͨ��������ȶ������ұ�־</li>
+<li>����������Ҫ��ջ֧��</li>
+</ul>
+<h2 id="��-2"><a href="#��-2" class="headerlink" title="��"></a>��</h2><h3 id="���J洢�u"><a href="#���J洢�u" class="headerlink" title="���Ĵ洢�ṹ"></a>���Ĵ洢�ṹ</h3><ul>
+<li>˫�ױ�ʾ����˳��ṹ��</li>
+<li>���ӱ�ʾ������ʽ�ṹ��<ul>
+<li>����С�̶�</li>
+<li>����С�ǹ̶�����ÿ��������������趨</li>
+<li>����������ʾ����������������ʽ��˳�����ϣ�</li>
+<li>��˫�׵ĺ���������ʾ��</li>
+<li>�����ֵܱ�ʾ������������������<ul>
+<li>��㣺���ֵ��ָ���򣺷ֱ�ָ�����������ֵ�</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="�����������ת��"><a href="#�����������ת��" class="headerlink" title="�����������ת��"></a>�����������ת��</h3><h4 id="��ת���ɶ�����"><a href="#��ת���ɶ�����" class="headerlink" title="��ת���ɶ�����"></a>��ת���ɶ�����</h4><ul>
+<li>���ߣ������ֵܽ��֮�����μ��ߣ�</li>
+<li>���ߣ�Ĩȥ�����������������������ӵ�����</li>
+<li>��ת���Ը��ڵ�Ϊ���ģ�����˳ʱ����ת45��<h4 id="������ת������"><a href="#������ת������" class="headerlink" title="������ת������"></a>������ת������</h4></li>
+<li>���ߣ����������������Һ������߷�֧�����е��Һ��Ӷ�������������</li>
+<li>���ߣ�Ĩȥԭ��������˫�����Һ���֮�������</li>
+<li>�����������Ľ�㰴�������</li>
+</ul>
+<h4 id="ɭ��ת���ɶ�����"><a href="#ɭ��ת���ɶ�����" class="headerlink" title="ɭ��ת���ɶ�����"></a>ɭ��ת���ɶ�����</h4><ul>
+<li>��ÿ����ת���ɶ�����</li>
+<li>��ÿ�����ڵ���������</li>
+<li>�Ե�һ�����ĸ��ڵ�Ϊ�������ĸ�������Ϊ����˳ʱ����ת���ɶ������ͽṹ</li>
+</ul>
+<h4 id="������ת����ɭ��"><a href="#������ת����ɭ��" class="headerlink" title="������ת����ɭ��"></a>������ת����ɭ��</h4><h3 id="���i���"><a href="#���i���" class="headerlink" title="���ı���"></a>���ı���</h3><h4 id="�ȸ�����"><a href="#�ȸ�����" class="headerlink" title="�ȸ�����"></a>�ȸ�����</h4>
     </div>
 
     
@@ -370,7 +441,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="/zerocath.com/2020/09/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="数据结构学习笔记">zerocath.com/2020/09/10/数据结构学习笔记/</a>
+    <a href="/zerocath.com/2020/09/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="���ݽṹѧϰ�ʼ�">zerocath.com/2020/09/10/数据结构学习笔记/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -381,9 +452,9 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"># 学习笔记</a>
-              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag"># 数据结构</a>
-              <a href="/tags/%E7%B1%BBC%E8%AF%AD%E8%A8%80/" rel="tag"># 类C语言</a>
+              <a href="/tags/%EF%BF%BD%EF%BF%BD%EF%BF%BD%DD%BDu/" rel="tag"># ���ݽṹ</a>
+              <a href="/tags/%D1%A7%CF%B0%EF%BF%BD%CA%BC%EF%BF%BD/" rel="tag"># ѧϰ�ʼ�</a>
+              <a href="/tags/%EF%BF%BD%EF%BF%BDC%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD/" rel="tag"># ��C����</a>
           </div>
 
         
@@ -396,8 +467,8 @@
       <i class="fa fa-chevron-left"></i> Hello-Kitty!
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/09/10/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="next" title="C++学习笔记">
-      C++学习笔记 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/09/10/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="next" title="C++ѧϰ�ʼ�">
+      C++ѧϰ�ʼ� <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -457,7 +528,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%AA%E8%AE%BA"><span class="nav-number">1.</span> <span class="nav-text">绪论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5%E6%9C%AF%E8%AF%AD"><span class="nav-number">1.1.</span> <span class="nav-text">概念术语</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E5%92%8C%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%EF%BC%9A"><span class="nav-number">1.2.</span> <span class="nav-text">算法和算法分析：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E8%A1%A8"><span class="nav-number">2.</span> <span class="nav-text">线性表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E5%AE%9A%E4%B9%89"><span class="nav-number">2.1.</span> <span class="nav-text">类型定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%BA%E5%BA%8F%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.2.</span> <span class="nav-text">顺序表示和实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%93%BE%E5%BC%8F%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.3.</span> <span class="nav-text">链式表示和实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E9%93%BE%E8%A1%A8"><span class="nav-number">2.3.1.</span> <span class="nav-text">静态链表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8"><span class="nav-number">2.3.2.</span> <span class="nav-text">循环链表</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97"><span class="nav-number">3.</span> <span class="nav-text">栈和队列</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%88"><span class="nav-number">3.1.</span> <span class="nav-text">栈</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%93%BE%E5%BC%8F%E6%A0%88"><span class="nav-number">3.1.1.</span> <span class="nav-text">链式栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8"><span class="nav-number">3.1.2.</span> <span class="nav-text">应用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%98%9F%E5%88%97"><span class="nav-number">3.2.</span> <span class="nav-text">队列</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="nav-number">1.</span> <span class="nav-text">����</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="nav-number">1.1.</span> <span class="nav-text">��������</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BF%BD%E3%B7%A8%EF%BF%BD%EF%BF%BD%EF%BF%BD%E3%B7%A8%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="nav-number">1.2.</span> <span class="nav-text">�㷨���㷨������</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%D4%B1%EF%BF%BD"><span class="nav-number">2.</span> <span class="nav-text">���Ա�</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%CD%B6%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="nav-number">2.1.</span> <span class="nav-text">���Ͷ���</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%CB%B3%EF%BF%BD%EF%BF%BD%EF%BF%BD%CA%BE%EF%BF%BD%EF%BF%BD%CA%B5%EF%BF%BD%EF%BF%BD"><span class="nav-number">2.2.</span> <span class="nav-text">˳���ʾ��ʵ��</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD%CA%BD%EF%BF%BD%EF%BF%BD%CA%BE%EF%BF%BD%EF%BF%BD%CA%B5%EF%BF%BD%EF%BF%BD"><span class="nav-number">2.3.</span> <span class="nav-text">��ʽ��ʾ��ʵ��</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD%CC%AC%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="nav-number">2.3.1.</span> <span class="nav-text">��̬����</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%D1%AD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="nav-number">2.3.2.</span> <span class="nav-text">ѭ������</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%D5%BB%EF%BF%BD%CD%B6%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="nav-number">3.</span> <span class="nav-text">ջ�Ͷ���</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%D5%BB"><span class="nav-number">3.1.</span> <span class="nav-text">ջ</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD%CA%BD%D5%BB"><span class="nav-number">3.1.1.</span> <span class="nav-text">��ʽջ</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%D3%A6%EF%BF%BD%EF%BF%BD"><span class="nav-number">3.1.2.</span> <span class="nav-text">Ӧ��</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD-1"><span class="nav-number">3.2.</span> <span class="nav-text">����</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD"><span class="nav-number">4.</span> <span class="nav-text">��</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD-1"><span class="nav-number">5.</span> <span class="nav-text">��</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD-2"><span class="nav-number">5.1.</span> <span class="nav-text">����</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%CA%BD"><span class="nav-number">5.1.1.</span> <span class="nav-text">������ʽ</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="nav-number">5.2.</span> <span class="nav-text">������</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD-3"><span class="nav-number">5.2.1.</span> <span class="nav-text">����</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD-4"><span class="nav-number">5.2.2.</span> <span class="nav-text">����</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BF%BD%DD%B9%EF%BF%BD"><span class="nav-number">5.2.2.1.</span> <span class="nav-text">�ݹ�</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BF%BDg%DD%B9%EF%BF%BD"><span class="nav-number">5.2.2.2.</span> <span class="nav-text">�ǵݹ�</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD-1"><span class="nav-number">5.2.3.</span> <span class="nav-text">��������</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BF%BD%DD%B9%EF%BF%BD-1"><span class="nav-number">5.2.3.1.</span> <span class="nav-text">�ݹ�</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BF%BDg%DD%B9%EF%BF%BD-1"><span class="nav-number">5.2.3.2.</span> <span class="nav-text">�ǵݹ�</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="nav-number">5.2.4.</span> <span class="nav-text">����������</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD-2"><span class="nav-number">5.3.</span> <span class="nav-text">��</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BDJ%E6%B4%A2%EF%BF%BDu"><span class="nav-number">5.3.1.</span> <span class="nav-text">���Ĵ洢�ṹ</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%D7%AA%EF%BF%BD%EF%BF%BD"><span class="nav-number">5.3.2.</span> <span class="nav-text">�����������ת��</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD%D7%AA%EF%BF%BD%EF%BF%BD%EF%BF%BD%C9%B6%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="nav-number">5.3.2.1.</span> <span class="nav-text">��ת���ɶ�����</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%D7%AA%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="nav-number">5.3.2.2.</span> <span class="nav-text">������ת������</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%C9%AD%EF%BF%BD%EF%BF%BD%D7%AA%EF%BF%BD%EF%BF%BD%EF%BF%BD%C9%B6%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="nav-number">5.3.2.3.</span> <span class="nav-text">ɭ��ת���ɶ�����</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%D7%AA%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%C9%AD%EF%BF%BD%EF%BF%BD"><span class="nav-number">5.3.2.4.</span> <span class="nav-text">������ת����ɭ��</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BDi%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="nav-number">5.3.3.</span> <span class="nav-text">���ı���</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BF%BD%C8%B8%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="nav-number">5.3.3.1.</span> <span class="nav-text">�ȸ�����</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -473,7 +544,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -486,7 +557,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

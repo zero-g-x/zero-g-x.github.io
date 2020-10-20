@@ -168,6 +168,155 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="zerocath.com/2020/10/20/Golang-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="g(x)">
+      <meta itemprop="description" content="水穷行到处，云起坐看时">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZEROCATH">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/20/Golang-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="post-title-link" itemprop="url">Golang:快速入门</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-10-20 15:06:06 / 修改时间：15:06:08" itemprop="dateCreated datePublished" datetime="2020-10-20T15:06:06+08:00">2020-10-20</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="zerocath.com/2020/10/16/%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%9A%E9%81%8D%E5%8E%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="g(x)">
+      <meta itemprop="description" content="水穷行到处，云起坐看时">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZEROCATH">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/16/%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%9A%E9%81%8D%E5%8E%86/" class="post-title-link" itemprop="url">二叉树：遍历</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-10-16 11:39:55" itemprop="dateCreated datePublished" datetime="2020-10-16T11:39:55+08:00">2020-10-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-10-19 21:08:20" itemprop="dateModified" datetime="2020-10-19T21:08:20+08:00">2020-10-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/NoteBook/" itemprop="url" rel="index"><span itemprop="name">NoteBook</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="遍历顺序："><a href="#遍历顺序：" class="headerlink" title="遍历顺序："></a>遍历顺序：</h1><p>规定从左到右</p>
+<ul>
+<li>前序：</li>
+<li>中序</li>
+<li>后序<h2 id="树的结构"><a href="#树的结构" class="headerlink" title="树的结构"></a>树的结构</h2></li>
+<li>定义如下：</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">BiTree</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">BiTree</span> *<span class="title">left</span>,*<span class="title">right</span>;</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">typedef</span> BiTree BTNode;</span><br><span class="line"><span class="keyword">typedef</span> BiTree *BT;</span><br></pre></td></tr></table></figure>
+<h1 id="递归算法"><a href="#递归算法" class="headerlink" title="递归算法"></a>递归算法</h1><h2 id="前序递归遍历"><a href="#前序递归遍历" class="headerlink" title="前序递归遍历"></a>前序递归遍历</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>若根节点为空，直接返回空，不为空则输出根节点后递归遍历根的左子结点，再递归遍历根的右子节点。</p>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">preOrderTravase</span><span class="params">(BT root)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!root)   <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,root-&gt;data);</span><br><span class="line">        preOrderTravase(root-&gt;left);</span><br><span class="line">        preOrderTravase(root-&gt;right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="中序递归遍历"><a href="#中序递归遍历" class="headerlink" title="中序递归遍历"></a>中序递归遍历</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">inOrderTravase</span><span class="params">(BT root)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!root)   <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        inOrderTravase(root-&gt;left);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,root-&gt;data);</span><br><span class="line">        inOrderTravase(root-&gt;right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="后序递归遍历"><a href="#后序递归遍历" class="headerlink" title="后序递归遍历"></a>后序递归遍历</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">postOrderTravase</span><span class="params">(BT root)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!root) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        postOrderTravase(root-&gt;left);</span><br><span class="line">        postOrderTravase(root-&gt;right);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,BT-&gt;data);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="非递归遍历"><a href="#非递归遍历" class="headerlink" title="非递归遍历"></a>非递归遍历</h1><h2 id="前序"><a href="#前序" class="headerlink" title="前序"></a>前序</h2><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>栈实现：根结点非空则先入栈，循环结构中，当栈非空时栈顶出栈，且将出栈结点的右结点和左节点（如果存在）分别入栈</p>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">preOrderTravase</span><span class="params">(BT root)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    BT <span class="built_in">stack</span>[MaxLeng],temp;</span><br><span class="line">    <span class="keyword">int</span> top=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(!root)   <span class="keyword">return</span>;</span><br><span class="line">    <span class="built_in">stack</span>[top++]=root;</span><br><span class="line">    <span class="keyword">while</span>(top)</span><br><span class="line">    &#123;</span><br><span class="line">        temp=<span class="built_in">stack</span>[--top];</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,temp-&gt;data);</span><br><span class="line">        <span class="keyword">if</span>(temp-&gt;right)</span><br><span class="line">            <span class="built_in">stack</span>[top++]=temp-&gt;right;</span><br><span class="line">        <span class="keyword">if</span>(temp-&gt;left)</span><br><span class="line">            <span class="built_in">stack</span>[top++]=temp-&gt;left;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="中序"><a href="#中序" class="headerlink" title="中序"></a>中序</h2><h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h3><p>栈实现：根结点非空则先入栈，循环体中，先将左子结点依次入栈至其无左节点;若栈非空，弹出栈顶结点并访问该结点，接着将其右子树作为根遍历</p>
+<h3 id="实现-1"><a href="#实现-1" class="headerlink" title="实现"></a>实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">inOrderTravase</span><span class="params">(BT root)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    BT <span class="built_in">stack</span>[MaxLeng];</span><br><span class="line">    <span class="keyword">int</span> top=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(root)</span><br><span class="line">    &#123;</span><br><span class="line">        temp=root;</span><br><span class="line">        <span class="keyword">do</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">while</span>(temp)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">stack</span>[top++]=temp;</span><br><span class="line">                temp=temp-&gt;left;</span><br><span class="line">            &#125;<span class="comment">//终止循环时，temp=NULL，栈顶的下一个才指向栈顶结点;</span></span><br><span class="line">            <span class="keyword">if</span>(top)<span class="comment">//栈非空</span></span><br><span class="line">            &#123;</span><br><span class="line">                temp=<span class="built_in">stack</span>[--top];</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,temp-&gt;data);</span><br><span class="line">                temp=temp-&gt;right;</span><br><span class="line">            &#125;<span class="comment">//if</span></span><br><span class="line">        &#125;<span class="keyword">while</span>(top||temp)<span class="comment">//do</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="后序"><a href="#后序" class="headerlink" title="后序"></a>后序</h2><h3 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h3><p>将根结点入栈，循环体中：将左子树依次入栈至无左子树,出栈，若有右兄弟结点同样出栈</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="zerocath.com/2020/09/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E6%A0%88%E7%9A%84%E5%BA%94%E7%94%A8%E4%B9%8B%E8%BF%B7%E5%AE%AB%E6%B1%82%E8%A7%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -259,7 +408,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/09/10/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">C++学习笔记</a>
+            <a href="/2020/09/10/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">C++ѧϰ�ʼ�</a>
         </h2>
 
         <div class="post-meta">
@@ -276,7 +425,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-09-19 22:41:32" itemprop="dateModified" datetime="2020-09-19T22:41:32+08:00">2020-09-19</time>
+                <time title="修改时间：2020-10-17 10:58:02" itemprop="dateModified" datetime="2020-10-17T10:58:02+08:00">2020-10-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -284,7 +433,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%AC%94%E8%AE%B0%E6%9C%AC/" itemprop="url" rel="index"><span itemprop="name">笔记本</span></a>
+                  <a href="/categories/%EF%BF%BD%CA%BCDZ%EF%BF%BD/" itemprop="url" rel="index"><span itemprop="name">�ʼǱ�</span></a>
                 </span>
             </span>
 
@@ -299,97 +448,148 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>参考：</p>
+          <p>�ο���</p>
 <ul>
-<li>C++ Primer中文版：第5版/ [美] Stanley B. Lippman / [美] Josée Lajoie / [美] Barbara E. Moo 著：王刚，杨巨峰译.——北京：电子工业出版社</li>
+<li>C++ Primer���İ棺��5��/ [��] Stanley B. Lippman / [��] Jos��e Lajoie / [��] Barbara E. Moo �������գ���޷���.�������������ӹ�ҵ������</li>
 </ul>
-<h1 id="变量和类型"><a href="#变量和类型" class="headerlink" title="变量和类型"></a>变量和类型</h1><h2 id="内置基本类型"><a href="#内置基本类型" class="headerlink" title="内置基本类型"></a>内置基本类型</h2><ul>
-<li><p>算术类型 </p>
-<p>  arithmetic type————整型、浮点型</p>
+<h1 id="����������"><a href="#����������" class="headerlink" title="����������"></a>����������</h1><h2 id="���u�������"><a href="#���u�������" class="headerlink" title="���û�������"></a>���û�������</h2><ul>
+<li><p>�������� </p>
+<p>  arithmetic type�����������͡�������</p>
 </li>
-<li><p>空类型</p>
+<li><p>������</p>
 <p>  void</p>
 </li>
 </ul>
-<h2 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h2><h3 id="空指针"><a href="#空指针" class="headerlink" title="空指针"></a>空指针</h3><ul>
-<li>用nullptr初始化</li>
-<li>用预处理变量NULL，定义在头文件cstdlib中，值为0(尽量避免)</li>
+<h2 id="ָ��"><a href="#ָ��" class="headerlink" title="ָ��"></a>ָ��</h2><h3 id="��ָ��"><a href="#��ָ��" class="headerlink" title="��ָ��"></a>��ָ��</h3><ul>
+<li>��nullptr��ʼ��</li>
+<li>��Ԥ��������NULL��������ͷ�ļ�cstdlib�У�ֵΪ0(��������)</li>
 </ul>
-<p>使用时最好全部初始化</p>
+<p>ʹ��ʱ���ȫ����ʼ��</p>
 <ul>
-<li>引用本身并非对象，一旦定义便无法绑定其他对象，每次访问都是初始时的对象</li>
-<li>引用是另一个对象的别名，而指针本身就是一个对象。</li>
-<li>引用必须初始化，并且一旦定义了引用就无法再绑定到其他对象。而指针无须在定义时赋初值，也可以重新赋值让其指向其他对象。</li>
+<li>���ñ������Ƕ���һ��������޷�����������ÿ�η��ʶ��ǳ�ʼʱ�Ķ���</li>
+<li>��������һ������ı�������ָ�뱾������һ������</li>
+<li>���ñ����ʼ��������һ�����������þ��޷��ٰ󶨵��������󡣶�ָ�������ڶ���ʱ����ֵ��Ҳ�������¸�ֵ����ָ����������</li>
 </ul>
-<h3 id="void"><a href="#void" class="headerlink" title="void *"></a>void *</h3><p>可用于存放任意类型的指针，没法访问空间中存储的变量。而其他指针类型必须要与所指对象严格匹配</p>
-<p>int* p1,p2;——p1是int *,p2是int</p>
-<h2 id="限定符"><a href="#限定符" class="headerlink" title="限定符"></a>限定符</h2><h3 id="const"><a href="#const" class="headerlink" title="const"></a>const</h3><ul>
-<li>const对象一旦创建无法改变，因此必须初始化</li>
-<li>默认const对象只在文件中有效，在其他文件中访问、引用需要加extern声明一次</li>
-<li>const引用 </li>
-<li>存放常量对象的地址只能使用指向常量的指针</li>
-<li>允许一个指向常量的指针存放非常量的对象</li>
-<li>常量指针必须初始化，且其指向的对象无法改变int *const curEE,不变的是指针的值而非其指向对象的值</li>
-<li>顶层const:指针本身是个常量</li>
-<li>底层const:指针所指对象是个常量</li>
+<h3 id="void"><a href="#void" class="headerlink" title="void *"></a>void *</h3><p>�����ڴ���������͵�ָ�룬û�����ʿռ��д洢�ı�����������ָ�����ͱ���Ҫ����ָ�����ϸ�ƥ��</p>
+<p>int* p1,p2;����p1��int *,p2��int</p>
+<h2 id="�޶���"><a href="#�޶���" class="headerlink" title="�޶���"></a>�޶���</h2><h3 id="const"><a href="#const" class="headerlink" title="const"></a>const</h3><ul>
+<li>const����һ�������޷��ı䣬��˱����ʼ��</li>
+<li>Ĭ��const����ֻ���ļ�����Ч���������ļ��з��ʡ�������Ҫ��extern����һ��</li>
+<li>const���� </li>
+<li>��ų�������ĵ�ַֻ��ʹ��ָ������ָ��</li>
+<li>����һ��ָ������ָ���ŷǳ����Ķ���</li>
+<li>����ָ������ʼ��������ָ��Ķ����޷��ı�int *const curEE,�������ָ���ֵ������ָ������ֵ</li>
+<li>����const:ָ�뱾���Ǹ�����</li>
+<li>�ײ�const:ָ����ָ�����Ǹ�����</li>
 </ul>
-<h3 id="constexpr"><a href="#constexpr" class="headerlink" title="constexpr"></a>constexpr</h3><h3 id="类型别名"><a href="#类型别名" class="headerlink" title="类型别名"></a>类型别名</h3><ul>
+<h3 id="constexpr"><a href="#constexpr" class="headerlink" title="constexpr"></a>constexpr</h3><h3 id="���ͱ���"><a href="#���ͱ���" class="headerlink" title="���ͱ���"></a>���ͱ���</h3><ul>
 <li>typedef</li>
-<li>别名声明：using 【类型别名】=【类型声明】</li>
+<li>����������using �����ͱ�����=������������</li>
 </ul>
-<h3 id="auto"><a href="#auto" class="headerlink" title="auto"></a>auto</h3><p>必须有初始值</p>
-<h2 id="字符串、向量、数组"><a href="#字符串、向量、数组" class="headerlink" title="字符串、向量、数组"></a>字符串、向量、数组</h2><h3 id="using声明"><a href="#using声明" class="headerlink" title="using声明"></a>using声明</h3><p>using namespace::name</p>
+<h3 id="auto"><a href="#auto" class="headerlink" title="auto"></a>auto</h3><p>�����г�ʼֵ</p>
+<h2 id="�ַ���������������"><a href="#�ַ���������������" class="headerlink" title="�ַ���������������"></a>�ַ���������������</h2><h3 id="using����"><a href="#using����" class="headerlink" title="using����"></a>using����</h3><p>using namespace::name</p>
 <ul>
-<li>每个名字都需要独立的using声明</li>
+<li>ÿ�����ֶ���Ҫ������using����</li>
 </ul>
 <h3 id="string"><a href="#string" class="headerlink" title="string"></a>string</h3><ul>
-<li><p>初始化</p>
+<li><p>��ʼ��</p>
 <ul>
-<li><p>使用=：拷贝初始化</p>
-<pre><code>需要创建临时对象</code></pre>
+<li><p>ʹ��=��������ʼ��</p>
+<pre><code>��Ҫ������ʱ����</code></pre>
 </li>
-<li><p>不使用=：直接初始化</p>
+<li><p>��ʹ��=��ֱ�ӳ�ʼ��</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> si;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s2</span><span class="params">(s1)</span></span>;</span><br><span class="line"><span class="built_in">string</span> s2=s1;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s3</span><span class="params">(<span class="string">&quot;abcd&quot;</span>)</span></span>;</span><br><span class="line"><span class="built_in">string</span> s3=<span class="string">&quot;abcd&quot;</span>;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s4</span><span class="params">(<span class="number">10</span>,<span class="string">&#x27;c&#x27;</span>)</span></span>;</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li><p>getline(cin,string_name)</p>
 <ul>
-<li>每次读入一整行，直到遇到换行符，最终的字符串里不包含换行符</li>
+<li>ÿ�ζ���һ���У�ֱ���������з������յ��ַ����ﲻ�������з�</li>
 </ul>
 </li>
 <li><p>string_name.empty()</p>
 <ul>
-<li>字符串为空返回true,否则返回false</li>
+<li>�ַ���Ϊ�շ���true,���򷵻�false</li>
 </ul>
 </li>
 <li><p>string_name.size()</p>
 <ul>
-<li>返回对象中字符的个数</li>
+<li>���ض������ַ��ĸ���</li>
 </ul>
 </li>
-<li><p>string可互相赋值</p>
+<li><p>string�ɻ��ำֵ</p>
 </li>
-<li><p>相加时必须至少有一个对象是string</p>
+<li><p>���ʱ����������һ��������string</p>
 </li>
-<li><p>字符串字面值与string不是同一类型</p>
+<li><p>�ַ�������ֵ��string����ͬһ����</p>
 </li>
-<li><p>处理每个字符</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (declaration : expression)</span><br><span class="line">    statement</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">str</span><span class="params">(<span class="string">&quot;some string&quot;</span>)</span></span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> c : str)</span><br><span class="line">    ci=out&lt;&lt; c &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s</span><span class="params">(<span class="string">&quot;Hello,World!&quot;</span>)</span></span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> &amp;c : s )<span class="comment">//注意引用</span></span><br><span class="line">    c = <span class="built_in">toupper</span>(c);</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">##<span class="meta"># vector</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">vector</span>是模板而非类型，由<span class="built_in">vector</span>生成的类型必须包含其中元素的类型</span><br><span class="line"></span><br><span class="line">- push_back</span><br><span class="line">    不能用下标形式来添加对象</span><br><span class="line">- <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::size_type</span><br><span class="line"></span><br><span class="line">### 迭代器</span><br><span class="line"></span><br><span class="line">- 使用迭代器</span><br><span class="line"></span><br><span class="line"><span class="keyword">auto</span> b=v.begin()</span><br><span class="line"></span><br><span class="line">e-v.end();<span class="comment">//end:尾后迭代器</span></span><br><span class="line"></span><br><span class="line">没什么实际含义，表示已经处理完了容器中的所有元素，并不实际指示某个元素</span><br><span class="line"></span><br><span class="line">若容器为空，begin和end返回的是同一个迭代器</span><br><span class="line"></span><br><span class="line">- 迭代器运算符</span><br><span class="line">  - 相等：两迭代器指向的元素相同或都是同一容器的尾后迭代器</span><br><span class="line">  - 可通过解引用迭代器来获取其所指示的元素</span><br><span class="line">```c</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s</span><span class="params">(<span class="string">&quot;some strings&quot;</span>)</span></span>;</span><br><span class="line"><span class="keyword">if</span>(s.begin()!=s.end())<span class="comment">//迭代器非空</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">auto</span> it = s.begin();</span><br><span class="line">    *it = <span class="built_in">toupper</span>(*it);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><p>����ÿ���ַ�</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (declaration : expression)</span><br><span class="line">    statement</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">str</span><span class="params">(<span class="string">&quot;some string&quot;</span>)</span></span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> c : str)</span><br><span class="line">    ci=out&lt;&lt; c &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s</span><span class="params">(<span class="string">&quot;Hello,World!&quot;</span>)</span></span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> &amp;c : s )<span class="comment">//ע������</span></span><br><span class="line">    c = <span class="built_in">toupper</span>(c);</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s &lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h3></li>
+</ul>
+<p>vector��ģ��������ͣ���vector���ɵ����ͱ����������Ԫ�ص�����</p>
+<ul>
+<li>push_back<br>  �������±���ʽ�����Ӷ���</li>
+<li>vector<int>::size_type</int></li>
+</ul>
+<h3 id="������"><a href="#������" class="headerlink" title="������"></a>������</h3><ul>
+<li>ʹ�õ�����</li>
+</ul>
+<p>auto b=v.begin()</p>
+<p>e-v.end();//end:β�������</p>
+<p>ûʲôʵ�ʺ��壬��ʾ�Ѿ��������������е�����Ԫ�أ�����ʵ��ָʾĳ��Ԫ��</p>
+<p>������Ϊ�գ�begin��end���ص���ͬһ��������</p>
+<ul>
+<li><p>�����������</p>
+<ul>
+<li>��ȣ���������ָ���Ԫ����ͬ����ͬһ������β�������</li>
+<li>��ͨ�������õ���������ȡ����ָʾ��Ԫ��<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s</span><span class="params">(<span class="string">&quot;some strings&quot;</span>)</span></span>;</span><br><span class="line"><span class="keyword">if</span>(s.begin()!=s.end())<span class="comment">//�������ǿ�</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">auto</span> it = s.begin();</span><br><span class="line">    *it = <span class="built_in">toupper</span>(*it);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>移动迭代器</p>
+</ul>
+</li>
+<li><p>�ƶ�������</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> it = s.begin(); it!=s.end() &amp;&amp; !<span class="built_in">isspace</span>(*it);it++)</span><br><span class="line">  *it=<span class="built_in">toupper</span>(*it);</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>迭代器类型</p>
+<li><p>����������</p>
 <ul>
-<li>iterator,const_iterator<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator it;<span class="comment">//能读写</span></span><br><span class="line"><span class="built_in">string</span>::iterator it2;</span><br><span class="line"></span><br><span class="line"><span class="comment">//只读不写</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::const_iterator it3;</span><br><span class="line"><span class="built_in">string</span>::const_iterator it4;</span><br></pre></td></tr></table></figure></li>
-<li>begin,end返回的具体类型由对象是否是常量决定</li>
-<li>cbegin,cend不管对象类型如何返回的都是常量</li>
+<li>iterator,const_iterator<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator it;<span class="comment">//�ܶ�д</span></span><br><span class="line"><span class="built_in">string</span>::iterator it2;</span><br><span class="line"></span><br><span class="line"><span class="comment">//ֻ����д</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::const_iterator it3;</span><br><span class="line"><span class="built_in">string</span>::const_iterator it4;</span><br></pre></td></tr></table></figure></li>
+<li>begin,end���صľ��������ɶ����Ƿ��ǳ�������</li>
+<li>cbegin,cend���ܶ���������η��صĶ��ǳ���</li>
 </ul>
 </li>
-<li><p>解引用和成员访问</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">(*it)empty();<span class="comment">//圆括号必不可少</span></span><br><span class="line"><span class="comment">//箭头运算符</span></span><br><span class="line">it-&gt;empty();</span><br><span class="line"></span><br><span class="line">- 迭代器失效</span><br><span class="line">  - 在<span class="keyword">for</span>循环中向<span class="built_in">vector</span>对象添加元素</span><br><span class="line">  - 任何一种可能改变<span class="built_in">vector</span>对象容量的操作，如push_back</span><br><span class="line">  - ！但凡是使用了迭代器的循环体都不要向迭代器所属的容器添加元素</span><br><span class="line"></span><br><span class="line">- 迭代器运算</span><br><span class="line"></span><br><span class="line">  - 算术运算</span><br><span class="line"></span><br><span class="line">    - 迭代器和整数值+/-，返回值为向前/后移动后的迭代器</span><br><span class="line">    - 关系运算符比较：合法且值向同一容器的元素</span><br><span class="line"></span><br><span class="line">### 数组</span><br><span class="line"></span><br><span class="line">- 定义与初始化</span><br><span class="line">  - 显式初始化，数组维度必须是常量表达式</span><br><span class="line">  - 数组元素为对象，不存在被引用的数组</span><br><span class="line">  - 不允许拷贝，赋值 </span><br><span class="line">  - 不存在引用的数组</span><br><span class="line"></span><br><span class="line">- begin/end函数</span><br><span class="line"></span><br><span class="line">  与<span class="built_in">vector</span>类似，但数组不是类类型，因此函数并非成员函数，应将数组作为其参数</span><br><span class="line">```c</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">10</span>]=&#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> *beg=begin(a);<span class="comment">//首元素指针</span></span><br><span class="line"><span class="keyword">int</span> *last = end(a);<span class="comment">//指向尾元素的下一位置的指针</span></span><br></pre></td></tr></table></figure>
+<li><p>�����úͳ�Ա����</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(*it)empty();<span class="comment">//Բ���űز�����</span></span><br><span class="line"><span class="comment">//��ͷ�����</span></span><br><span class="line">it-&gt;empty();</span><br></pre></td></tr></table></figure></li>
+<li><p>������ʧЧ</p>
 <ul>
-<li>尾后指针不能执行解引用和递增</li>
+<li>��forѭ������vector��������Ԫ��</li>
+<li>�κ�һ�ֿ��ܸı�vector���������Ĳ�������push_back</li>
+<li>��������ʹ���˵�������ѭ���嶼��Ҫ���������������������Ԫ��</li>
+</ul>
+</li>
+<li><p>����������</p>
+<ul>
+<li><p>��������</p>
+<ul>
+<li>������������ֵ+/-������ֵΪ��ǰ/���ƶ���ĵ�����</li>
+<li>��ϵ������Ƚϣ��Ϸ���ֵ��ͬһ������Ԫ��</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="����"><a href="#����" class="headerlink" title="����"></a>����</h3><ul>
+<li><p>�������ʼ��</p>
+<ul>
+<li>��ʽ��ʼ��������ά�ȱ����ǳ�������ʽ</li>
+<li>����Ԫ��Ϊ���󣬲����ڱ����õ�����</li>
+<li>��������������ֵ </li>
+<li>���������õ�����</li>
+</ul>
+</li>
+<li><p>begin/end����</p>
+<p>��vector���ƣ������鲻�������ͣ���˺������ǳ�Ա������Ӧ��������Ϊ�����</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">10</span>]=&#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> *beg=begin(a);<span class="comment">//��Ԫ��ָ��</span></span><br><span class="line"><span class="keyword">int</span> *last = end(a);<span class="comment">//ָ��βԪ�ص���һλ�õ�ָ��</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>β��ָ�벻��ִ�н����ú͵���</li>
 </ul>
 </li>
 </ul>
@@ -426,7 +626,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/09/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">数据结构学习笔记</a>
+            <a href="/2020/09/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">���ݽṹѧϰ�ʼ�</a>
         </h2>
 
         <div class="post-meta">
@@ -443,7 +643,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-09-25 00:29:02" itemprop="dateModified" datetime="2020-09-25T00:29:02+08:00">2020-09-25</time>
+                <time title="修改时间：2020-10-20 16:28:02" itemprop="dateModified" datetime="2020-10-20T16:28:02+08:00">2020-10-20</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -466,108 +666,179 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>参考：</p>
+          <p>�ο���</p>
 <ul>
-<li>数据结构：C语言版/严蔚敏，吴伟民编著·———北京：清华大学出版社，1997.4 </li>
+<li>���ݽṹ��C���԰�/��ε������ΰ��������������������廪��ѧ�����磬1997.4 </li>
 </ul>
-<h1 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h1><h2 id="概念术语"><a href="#概念术语" class="headerlink" title="概念术语"></a>概念术语</h2><ul>
-<li><p>数据</p>
-<p>  能输入到计算机并被处理的符号的总称</p>
+<h1 id="����"><a href="#����" class="headerlink" title="����"></a>����</h1><h2 id="��������"><a href="#��������" class="headerlink" title="��������"></a>��������</h2><ul>
+<li><p>����</p>
+<p>  �����뵽��������������ķ��ŵ��ܳ�</p>
 </li>
-<li><p>数据元素</p>
+<li><p>����Ԫ��</p>
 <ul>
-<li>数据的基本单位</li>
-<li>可由若干数据项组成<ul>
-<li>数据项：数据的不可分割的最小单位</li>
+<li>���ݵĻ�����λ</li>
+<li>�����������������<ul>
+<li>��������ݵĲ��ɷָ����С��λ</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>数据对象<br>  性质相同的数据元素的集合，是数据的子集</p>
+<li><p>���ݶ���<br>  ������ͬ������Ԫ�صļ��ϣ������ݵ��Ӽ�</p>
 </li>
-<li><p>数据结构</p>
-<p>  相互之间存在一种或多种特定关系的数据元素的集合</p>
+<li><p>���ݽṹ</p>
+<p>  �໥֮�����һ�ֻ�����ض���ϵ������Ԫ�صļ���</p>
 </li>
 </ul>
-<p>逻辑关系/结构：<br>    - 集合：结构中的元素除了同属一个集合外无其他关系<br>    - 线性结构：数据元素存在一个对一个的关系<br>    - 树形结构：数据元素间存在一个对多个的关系<br>    - 图/网装结构：数据元素间存在多个对多个的关系</p>
-<p>物理结构/存储结构：数据结构在计算机中的表示</p>
-<pre><code>- 顺序存储结构：分配空间连续，eg.向量、一维数组
-- 链式存储结构：非顺序，分配空间不一定连续，eg.链表借助指示元素存储地址的指针表示数据元素间的逻辑关系
-- 索引数据结构：用附加的索引表标识节点地址,eg.目录
-- 哈希数据结构/散列结构：由节点的关键码值决定节点的存储位置</code></pre>
+<p>�߼���ϵ/�ṹ��<br>    - ���ϣ��ṹ�е�Ԫ�س���ͬ��һ����������������ϵ<br>    - ���Խṹ������Ԫ�ش���һ����һ���Ĺ�ϵ<br>    - ���νṹ������Ԫ�ؼ����һ���Զ���Ĺ�ϵ<br>    - ͼ/��װ�ṹ������Ԫ�ؼ���ڶ���Զ���Ĺ�ϵ</p>
+<p>�����ṹ/�洢�ṹ�����ݽṹ�ڼ�����еı�ʾ</p>
+<pre><code>- ˳��洢�ṹ������ռ�������eg.������һά����
+- ��ʽ�洢�ṹ����˳�򣬷���ռ䲻һ��������eg.��������ָʾԪ�ش洢��ַ��ָ���ʾ����Ԫ�ؼ���߼���ϵ
+- �������ݽṹ���ø��ӵ���������ʶ�ڵ��ַ,eg.Ŀ¼
+- ��ϣ���ݽṹ/ɢ�нṹ���ɽڵ�Ĺؼ���ֵ�����ڵ�Ĵ洢λ��</code></pre>
 <ul>
-<li><p>数据类型：一个值的集合和定义在这个值集上的一组操作的总称</p>
+<li><p>�������ͣ�һ��ֵ�ļ��ϺͶ��������ֵ���ϵ�һ��������ܳ�</p>
 <ul>
-<li><p>原子类型</p>
-<p>  不可分解的、非结构的。eg.int char</p>
+<li><p>ԭ������</p>
+<p>  ���ɷֽ�ġ��ǽṹ�ġ�eg.int char</p>
 </li>
-<li><p>结构类型</p>
-<p>  由若干成分按某种结构组成</p>
+<li><p>�ṹ����</p>
+<p>  �����ɳɷְ�ĳ�ֽṹ���</p>
 </li>
 </ul>
 </li>
-<li><p>抽象数据类型<br>ADT abstract data type，一个数学模型以及定义在其上的一组操作，定义仅取决于它的一组逻辑特性，与其在计算机内部的表示与如何实现无关。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ADT 抽象数据类型名&#123;</span><br><span class="line">    数据对象：&lt;定义&gt;</span><br><span class="line">    数据关系：&lt;定义&gt;</span><br><span class="line">    基本操作：&lt;定义&gt;</span><br><span class="line">&#125;ADT 抽象数据类型名</span><br><span class="line"></span><br><span class="line">基本操作名&lt;参数表&gt;</span><br><span class="line">  初始条件：&lt;初始条件描述&gt;</span><br><span class="line">  操作结果：&lt;操作结果描述&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="算法和算法分析："><a href="#算法和算法分析：" class="headerlink" title="算法和算法分析："></a>算法和算法分析：</h2></li>
-<li><p>算法：对特定问题求解步骤的一种描述，它是指令的有限序列，其中每一条指令表示一个或多个操作。</p>
+<li><p>������������<br>ADT abstract data type��һ����ѧģ���Լ����������ϵ�һ������������ȡ��������һ���߼����ԣ������ڼ�����ڲ��ı�ʾ�����ʵ���޹ء�</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ADT ��������������&#123;</span><br><span class="line">    ���ݶ���&lt;����&gt;</span><br><span class="line">    ���ݹ�ϵ��&lt;����&gt;</span><br><span class="line">    ����������&lt;����&gt;</span><br><span class="line">&#125;ADT ��������������</span><br><span class="line"></span><br><span class="line">����������&lt;������&gt;</span><br><span class="line">  ��ʼ������&lt;��ʼ��������&gt;</span><br><span class="line">  ���������&lt;�����������&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="�㷨���㷨������"><a href="#�㷨���㷨������" class="headerlink" title="�㷨���㷨������"></a>�㷨���㷨������</h2></li>
+<li><p>�㷨�����ض�������ⲽ���һ������������ָ����������У�����ÿһ��ָ���ʾһ������������</p>
 <ul>
-<li>有穷性，确定性，可行性，输入，输出</li>
-<li>设计要求：正确性，可读性，健壮性，效率与低存储量需求</li>
+<li>�����ԣ�ȷ���ԣ������ԣ����룬���</li>
+<li>���Ҫ����ȷ�ԣ��ɶ��ԣ���׳�ԣ�Ч����ʹ洢������</li>
 </ul>
 </li>
-<li><p>算法分析</p>
-<p>  时间复杂度，空间复杂度，稳定性</p>
-<h1 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h1><h2 id="类型定义"><a href="#类型定义" class="headerlink" title="类型定义"></a>类型定义</h2></li>
-<li><p>相邻数据元素间存在序偶关系</p>
+<li><p>�㷨����</p>
+<p>  ʱ�临�Ӷȣ��ռ临�Ӷȣ��ȶ���</p>
+<h1 id="���Ա�"><a href="#���Ա�" class="headerlink" title="���Ա�"></a>���Ա�</h1><h2 id="���Ͷ���"><a href="#���Ͷ���" class="headerlink" title="���Ͷ���"></a>���Ͷ���</h2></li>
+<li><p>��������Ԫ�ؼ������ż��ϵ</p>
 </li>
-<li><p>前驱、后继元素</p>
+<li><p>ǰ�������Ԫ��</p>
 </li>
-<li><p>线性表长度：元素的个数</p>
-<h2 id="顺序表示和实现"><a href="#顺序表示和实现" class="headerlink" title="顺序表示和实现"></a>顺序表示和实现</h2><p>将线性表的数据元素依次存放在计算机存储器中一组地址连续的存储单元中，得到顺序存储结构或向量</p>
+<li><p>���Ա����ȣ�Ԫ�صĸ���</p>
+<h2 id="˳���ʾ��ʵ��"><a href="#˳���ʾ��ʵ��" class="headerlink" title="˳���ʾ��ʵ��"></a>˳���ʾ��ʵ��</h2><p>�����Ա�������Ԫ�����δ���ڼ�����洢����һ���ַ�����Ĵ洢��Ԫ�У��õ�˳��洢�ṹ������</p>
 </li>
-<li><p>静态分配</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> maxleng 100</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElemType elem[maxleng];<span class="comment">//下标：0,1...,maxleng-1</span></span><br><span class="line">    <span class="keyword">int</span> length;<span class="comment">//表长</span></span><br><span class="line">&#125;SqList;<span class="comment">//结构类型名</span></span><br><span class="line">Sqlist La;<span class="comment">//结构类型变量名</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<li><p>��̬����</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> maxleng 100</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElemType elem[maxleng];<span class="comment">//�±꣺0,1...,maxleng-1</span></span><br><span class="line">    <span class="keyword">int</span> length;<span class="comment">//����</span></span><br><span class="line">&#125;SqList;<span class="comment">//�ṹ������</span></span><br><span class="line">Sqlist La;<span class="comment">//�ṹ���ͱ�����</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <ul>
-<li>指针 *,用-&gt;指向结构中的元素</li>
-<li>引用参数，用.</li>
+<li>ָ�� *,��-&gt;ָ��ṹ�е�Ԫ��</li>
+<li>���ò�������.</li>
 </ul>
 </li>
-<li><p>动态分配</p>
+<li><p>��̬����</p>
 <ul>
-<li><p>引用参数</p>
+<li><p>���ò���</p>
 </li>
-<li><p>realloc函数</p>
-<p>  extern void *realloc(void *mem_address, unsigned int newsize);#include &lt;stdlib.h&gt; 有些编译器需要#include &lt;malloc.h&gt;，在TC2.0中可以使用alloc.h头文件.先判断当前的指针是否有足够的连续空间，如果有，扩大mem_address指向的地址，并且将mem_address返回，如果空间不够，先按照newsize指定的大小分配空间，将原有数据从头到尾拷贝到新分配的内存区域，而后释放原来mem_address所指内存区域（注意：原来指针是自动释放，不需要使用free），同时返回新分配的内存区域的首地址。即重新分配存储器块的地址。返回值：如果重新分配成功则返回指向被分配内存的指针，否则返回空指针NULL。</p>
-</li>
-</ul>
+<li><p>realloc����</p>
+<p>  extern void *realloc(void *mem_address, unsigned int newsize);#include &lt;stdlib.h&gt; ��Щ��������Ҫ#include &lt;malloc.h&gt;����TC2.0�п���ʹ��alloc.hͷ�ļ�.���жϵ�ǰ��ָ���Ƿ����㹻�������ռ䣬����У�����mem_addressָ��ĵ�ַ�����ҽ�mem_address���أ�����ռ䲻�����Ȱ���newsizeָ���Ĵ�С����ռ䣬��ԭ�����ݴ�ͷ��β�������·�����ڴ����򣬶����ͷ�ԭ��mem_address��ָ�ڴ�����ע�⣺ԭ��ָ�����Զ��ͷţ�����Ҫʹ��free����ͬʱ�����·�����ڴ�������׵�ַ�������·���洢����ĵ�ַ������ֵ��������·���ɹ��򷵻�ָ�򱻷����ڴ��ָ�룬���򷵻ؿ�ָ��NULL��</p>
 </li>
 </ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LIST_INIT_SIZE 100 <span class="comment">//初始表厂</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LIST_INCRESEMENT 10 <span class="comment">//每次增加的增量</span></span></span><br><span class="line">tyedef <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    Elem_Type *elem;<span class="comment">//存储空间的基地址</span></span><br><span class="line">    <span class="keyword">int</span> length;<span class="comment">//表长</span></span><br><span class="line">    <span class="keyword">int</span> listsize;<span class="comment">//当前分配的存储容量</span></span><br><span class="line">&#125; Sqlist1;</span><br><span class="line">Sqlist1 Lb;</span><br><span class="line"><span class="comment">//构造空线性表L</span></span><br><span class="line"><span class="function">Status <span class="title">initList_Sq</span><span class="params">(Sqlist1 &amp;L)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    L.elem = (Elem_Type *)<span class="built_in">malloc</span>(LIST_INIT_SIZE*<span class="keyword">sizeof</span>(Elem_Type));</span><br><span class="line">    <span class="keyword">if</span>(!L.elem)<span class="built_in">exit</span>(OVERFLOW);</span><br><span class="line">    L.length=<span class="number">0</span>;<span class="comment">//空表长度为0</span></span><br><span class="line">    L.listsize=LIST_INIT_SIZE;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">int</span> <span class="title">Insert3</span><span class="params">(SqList &amp;L,<span class="keyword">int</span> i, ElemType e)</span></span></span><br><span class="line"><span class="function">  </span>&#123;<span class="keyword">int</span> j;</span><br><span class="line">   <span class="keyword">if</span> (i&lt;<span class="number">1</span> || i&gt;L.length+<span class="number">1</span>)     <span class="comment">//i的合法取值为1至n+1</span></span><br><span class="line">          <span class="keyword">return</span> ERROR; </span><br><span class="line">   <span class="keyword">if</span> (L.length&gt;=L.listsize)    <span class="comment">/*溢出时扩充*/</span></span><br><span class="line">	  &#123; </span><br><span class="line">     ElemType *newbase;</span><br><span class="line">     newbase=(ElemType *) <span class="built_in">realloc</span>(L.elem,</span><br><span class="line">		(L.listsize+LISTINCREMENT)*<span class="keyword">sizeof</span>(ElemType));</span><br><span class="line">	  <span class="keyword">if</span> (newbase==<span class="literal">NULL</span>) <span class="keyword">return</span> OVERFLOW;   <span class="comment">//扩充失败</span></span><br><span class="line">     L.elem=newbase;</span><br><span class="line">     L.listsize+=LISTINCREMENT;</span><br><span class="line">	  &#125;</span><br><span class="line"><span class="comment">//向后移动元素，空出第i个元素的分量elem[i-1]</span></span><br><span class="line"><span class="keyword">for</span>(j=L.length<span class="number">-1</span>;j&gt;=i<span class="number">-1</span>;j--)</span><br><span class="line">	L.elem[j+<span class="number">1</span>]=L.elem[j];</span><br><span class="line">L.elem[i<span class="number">-1</span>]=e;                   <span class="comment">/*新元素插入*/</span></span><br><span class="line">L.length++;                      <span class="comment">/*线性表长度加1*/</span></span><br><span class="line"><span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="链式表示和实现"><a href="#链式表示和实现" class="headerlink" title="链式表示和实现"></a>链式表示和实现</h2><p>有无头结点</p>
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LIST_INIT_SIZE 100 <span class="comment">//��ʼ����</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LIST_INCRESEMENT 10 <span class="comment">//ÿ�����ӵ�����</span></span></span><br><span class="line">tyedef <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    Elem_Type *elem;<span class="comment">//�洢�ռ�Ļ���ַ</span></span><br><span class="line">    <span class="keyword">int</span> length;<span class="comment">//����</span></span><br><span class="line">    <span class="keyword">int</span> listsize;<span class="comment">//��ǰ����Ĵ洢����</span></span><br><span class="line">&#125; Sqlist1;</span><br><span class="line">Sqlist1 Lb;</span><br><span class="line"><span class="comment">//��������Ա�L</span></span><br><span class="line"><span class="function">Status <span class="title">initList_Sq</span><span class="params">(Sqlist1 &amp;L)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    L.elem = (Elem_Type *)<span class="built_in">malloc</span>(LIST_INIT_SIZE*<span class="keyword">sizeof</span>(Elem_Type));</span><br><span class="line">    <span class="keyword">if</span>(!L.elem)<span class="built_in">exit</span>(OVERFLOW);</span><br><span class="line">    L.length=<span class="number">0</span>;<span class="comment">//�ձ�����Ϊ0</span></span><br><span class="line">    L.listsize=LIST_INIT_SIZE;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">int</span> <span class="title">Insert3</span><span class="params">(SqList &amp;L,<span class="keyword">int</span> i, ElemType e)</span></span></span><br><span class="line"><span class="function">  </span>&#123;<span class="keyword">int</span> j;</span><br><span class="line">   <span class="keyword">if</span> (i&lt;<span class="number">1</span> || i&gt;L.length+<span class="number">1</span>)     <span class="comment">//i�ĺϷ�ȡֵΪ1��n+1</span></span><br><span class="line">          <span class="keyword">return</span> ERROR; </span><br><span class="line">   <span class="keyword">if</span> (L.length&gt;=L.listsize)    <span class="comment">/*���ʱ����*/</span></span><br><span class="line">	  &#123; </span><br><span class="line">     ElemType *newbase;</span><br><span class="line">     newbase=(ElemType *) <span class="built_in">realloc</span>(L.elem,</span><br><span class="line">		(L.listsize+LISTINCREMENT)*<span class="keyword">sizeof</span>(ElemType));</span><br><span class="line">	  <span class="keyword">if</span> (newbase==<span class="literal">NULL</span>) <span class="keyword">return</span> OVERFLOW;   <span class="comment">//����ʧ��</span></span><br><span class="line">     L.elem=newbase;</span><br><span class="line">     L.listsize+=LISTINCREMENT;</span><br><span class="line">	  &#125;</span><br><span class="line"><span class="comment">//����ƶ�Ԫ�أ��ճ���i��Ԫ�صķ���elem[i-1]</span></span><br><span class="line"><span class="keyword">for</span>(j=L.length<span class="number">-1</span>;j&gt;=i<span class="number">-1</span>;j--)</span><br><span class="line">	L.elem[j+<span class="number">1</span>]=L.elem[j];</span><br><span class="line">L.elem[i<span class="number">-1</span>]=e;                   <span class="comment">/*��Ԫ�ز���*/</span></span><br><span class="line">L.length++;                      <span class="comment">/*���Ա����ȼ�1*/</span></span><br><span class="line"><span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="��ʽ��ʾ��ʵ��"><a href="#��ʽ��ʾ��ʵ��" class="headerlink" title="��ʽ��ʾ��ʵ��"></a>��ʽ��ʾ��ʵ��</h2><p>����ͷ���</p>
 <ul>
-<li>单链表创建<ul>
-<li>先进先出</li>
-<li>先进后出</li>
+<li>����������<ul>
+<li>�Ƚ��ȳ�</li>
+<li>�Ƚ����</li>
 </ul>
 </li>
-<li>单链表读取</li>
-<li>单链表插入</li>
-<li>单链表删除</li>
+<li>��������ȡ</li>
+<li>����������</li>
+<li>������ɾ��</li>
 </ul>
-<h3 id="静态链表"><a href="#静态链表" class="headerlink" title="静态链表"></a>静态链表</h3><h3 id="循环链表"><a href="#循环链表" class="headerlink" title="循环链表"></a>循环链表</h3><h1 id="栈和队列"><a href="#栈和队列" class="headerlink" title="栈和队列"></a>栈和队列</h1><h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><ul>
-<li>只在表尾(栈顶top)进行插入、删除操作的线性表</li>
-<li>线性栈<h3 id="链式栈"><a href="#链式栈" class="headerlink" title="链式栈"></a>链式栈</h3></li>
-<li>将新结点作为首结点，出栈时删除首结点</li>
+<h3 id="��̬����"><a href="#��̬����" class="headerlink" title="��̬����"></a>��̬����</h3><h3 id="ѭ������"><a href="#ѭ������" class="headerlink" title="ѭ������"></a>ѭ������</h3><h1 id="ջ�Ͷ���"><a href="#ջ�Ͷ���" class="headerlink" title="ջ�Ͷ���"></a>ջ�Ͷ���</h1><h2 id="ջ"><a href="#ջ" class="headerlink" title="ջ"></a>ջ</h2><ul>
+<li>ֻ�ڱ�β(ջ��top)���в��롢ɾ�����������Ա�</li>
+<li>����ջ<h3 id="��ʽջ"><a href="#��ʽջ" class="headerlink" title="��ʽջ"></a>��ʽջ</h3></li>
+<li>���½����Ϊ�׽�㣬��ջʱɾ���׽��</li>
 </ul>
-<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><ul>
-<li>数制转换</li>
-<li>表达式括号匹配</li>
-<li>表达式求值</li>
+<h3 id="Ӧ��"><a href="#Ӧ��" class="headerlink" title="Ӧ��"></a>Ӧ��</h3><ul>
+<li>����ת��</li>
+<li>����ʽ����ƥ��</li>
+<li>����ʽ��ֵ</li>
 </ul>
-<h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><ul>
-<li>只允许在表的一端删除元素，在另一端插入元素</li>
+<h2 id="����-1"><a href="#����-1" class="headerlink" title="����"></a>����</h2><ul>
+<li>ֻ�����ڱ���һ��ɾ��Ԫ�أ�����һ�˲���Ԫ��</li>
 </ul>
-
+<h1 id="��"><a href="#��" class="headerlink" title="��"></a>��</h1><h1 id="��-1"><a href="#��-1" class="headerlink" title="��"></a>��</h1><h2 id="����-2"><a href="#����-2" class="headerlink" title="����"></a>����</h2><ul>
+<li>���Ķȣ�����������Ŀ</li>
+<li>���Ķȣ��������Ľ��Ķ�</li>
+<li>Ҷ�ӣ���Ϊ0</li>
+<li>��֧��㣺�Ȳ�Ϊ0</li>
+<li>���Ĳ㣺����ڵڼ���</li>
+<li>���ĸ߶ȣ����н������ֵ</li>
+</ul>
+<h3 id="������ʽ"><a href="#������ʽ" class="headerlink" title="������ʽ"></a>������ʽ</h3><ul>
+<li>�����</li>
+<li>Ƕ�׼���</li>
+</ul>
+<h2 id="������"><a href="#������" class="headerlink" title="������"></a>������</h2><h3 id="����-3"><a href="#����-3" class="headerlink" title="����"></a>����</h3><ul>
+<li>��i�������2^(i-1)�����</li>
+<li>��������</li>
+<li>��ȫ������<ul>
+<li>��i����㣬��С����2<em>i,��С����2</em>i+1</li>
+</ul>
+</li>
+</ul>
+<h3 id="����-4"><a href="#����-4" class="headerlink" title="����"></a>����</h3><h4 id="�ݹ�"><a href="#�ݹ�" class="headerlink" title="�ݹ�"></a>�ݹ�</h4><ul>
+<li>ǰ�к���<h4 id="�gݹ�"><a href="#�gݹ�" class="headerlink" title="�ǵݹ�"></a>�ǵݹ�</h4><ul>
+<li>����</li>
+</ul>
+</li>
+</ul>
+<p>����ָ��ǿ�����ջ��������������������������Ϊ��ʱ������ջ������ٷ������ҽ�㣬���ѭ��</p>
+<ul>
+<li>����</li>
+</ul>
+<p>��ָ������ջ��ѭ�����У����ڵ��ջ�������ҽ��ǿ�����ջ��������ڵ�ǿռ�����ջ���ٽ�����һ��ѭ����</p>
+<ul>
+<li>����</li>
+</ul>
+<p>������ջ��ѭ�����У��Ƚ���ڵ�ȫ����ջ��1.�����Ϊ��ĸ�������������Һ���ʱ�����ý���ջ������������ֵܣ����ֵ���ջ 2.�����Ϊ�Һ���ʱ��ֱ�ӳ�ջ</p>
+<h3 id="��������-1"><a href="#��������-1" class="headerlink" title="��������"></a>��������</h3><h4 id="�ݹ�-1"><a href="#�ݹ�-1" class="headerlink" title="�ݹ�"></a>�ݹ�</h4><p>���������ı���</p>
+<h4 id="�gݹ�-1"><a href="#�gݹ�-1" class="headerlink" title="�ǵݹ�"></a>�ǵݹ�</h4><ul>
+<li>���ø�����ֵ���������������еı��</li>
+</ul>
+<h3 id="����������"><a href="#����������" class="headerlink" title="����������"></a>����������</h3><ul>
+<li>�����������յ���ָ����ָ��ֱ��ǰ�����յ���ָ����ָ��ֱ�Ӻ�̣��ǿ�ָ�벻�䣨ǰ����̰�������������˳�����)</li>
+<li>�洢�ṹ������ͨ��������ȶ������ұ�־</li>
+<li>����������Ҫ��ջ֧��</li>
+</ul>
+<h2 id="��-2"><a href="#��-2" class="headerlink" title="��"></a>��</h2><h3 id="���J洢�u"><a href="#���J洢�u" class="headerlink" title="���Ĵ洢�ṹ"></a>���Ĵ洢�ṹ</h3><ul>
+<li>˫�ױ�ʾ����˳��ṹ��</li>
+<li>���ӱ�ʾ������ʽ�ṹ��<ul>
+<li>����С�̶�</li>
+<li>����С�ǹ̶�����ÿ��������������趨</li>
+<li>����������ʾ����������������ʽ��˳�����ϣ�</li>
+<li>��˫�׵ĺ���������ʾ��</li>
+<li>�����ֵܱ�ʾ������������������<ul>
+<li>��㣺���ֵ��ָ���򣺷ֱ�ָ�����������ֵ�</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="�����������ת��"><a href="#�����������ת��" class="headerlink" title="�����������ת��"></a>�����������ת��</h3><h4 id="��ת���ɶ�����"><a href="#��ת���ɶ�����" class="headerlink" title="��ת���ɶ�����"></a>��ת���ɶ�����</h4><ul>
+<li>���ߣ������ֵܽ��֮�����μ��ߣ�</li>
+<li>���ߣ�Ĩȥ�����������������������ӵ�����</li>
+<li>��ת���Ը��ڵ�Ϊ���ģ�����˳ʱ����ת45��<h4 id="������ת������"><a href="#������ת������" class="headerlink" title="������ת������"></a>������ת������</h4></li>
+<li>���ߣ����������������Һ������߷�֧�����е��Һ��Ӷ�������������</li>
+<li>���ߣ�Ĩȥԭ��������˫�����Һ���֮�������</li>
+<li>�����������Ľ�㰴�������</li>
+</ul>
+<h4 id="ɭ��ת���ɶ�����"><a href="#ɭ��ת���ɶ�����" class="headerlink" title="ɭ��ת���ɶ�����"></a>ɭ��ת���ɶ�����</h4><ul>
+<li>��ÿ����ת���ɶ�����</li>
+<li>��ÿ�����ڵ���������</li>
+<li>�Ե�һ�����ĸ��ڵ�Ϊ�������ĸ�������Ϊ����˳ʱ����ת���ɶ������ͽṹ</li>
+</ul>
+<h4 id="������ת����ɭ��"><a href="#������ת����ɭ��" class="headerlink" title="������ת����ɭ��"></a>������ת����ɭ��</h4><h3 id="���i���"><a href="#���i���" class="headerlink" title="���ı���"></a>���ı���</h3><h4 id="�ȸ�����"><a href="#�ȸ�����" class="headerlink" title="�ȸ�����"></a>�ȸ�����</h4>
       
     </div>
 
@@ -724,7 +995,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -737,7 +1008,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
