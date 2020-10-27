@@ -168,6 +168,173 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="zerocath.com/2020/10/27/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="g(x)">
+      <meta itemprop="description" content="水穷行到处，云起坐看时">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZEROCATH">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/27/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" class="post-title-link" itemprop="url">排序算法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-10-27 15:00:20 / 修改时间：20:18:44" itemprop="dateCreated datePublished" datetime="2020-10-27T15:00:20+08:00">2020-10-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/NoteBook/" itemprop="url" rel="index"><span itemprop="name">NoteBook</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="初级排序算法"><a href="#初级排序算法" class="headerlink" title="初级排序算法"></a>初级排序算法</h1><h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><ul>
+<li>Selection<h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3>先找到数组中最小的值，与第一个元素交换位置，再次在剩下的元素中找到最小的元素与第二个元素交换位置，以此类推直至将整个数组排序。即不断选择剩余数组中的最小值<h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3></li>
+<li>需要N^2/2次比较和N次交换</li>
+<li>运行时间和输入顺序无关</li>
+<li>数据移动次数最小</li>
+</ul>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><ul>
+<li>golang<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Selection</span><span class="params">(a []*<span class="keyword">int</span>)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> i,_:=<span class="keyword">range</span> *a&#123;</span><br><span class="line">        tmin := i</span><br><span class="line">        <span class="keyword">for</span> j,_:=<span class="keyword">range</span> *a[i+<span class="number">1</span>:]&#123;</span><br><span class="line">            <span class="keyword">if</span> *a[j]&lt;*a[tmin]&#123;</span><br><span class="line">                tmin=j</span><br><span class="line">            &#125;</span><br><span class="line">            temp := *a[tmin]</span><br><span class="line">            *a[tmin]=*a[i]</span><br><span class="line">            *a[i]=temp</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>C</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Selection</span><span class="params">(<span class="keyword">int</span> *a[],<span class="keyword">int</span> size)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;size;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> minIndex=i;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;size;j++)</span><br><span class="line">            <span class="keyword">if</span>(a[j]&lt;a[minIndex])</span><br><span class="line">                minIndex=j;</span><br><span class="line">        <span class="keyword">int</span> temp = a[i];</span><br><span class="line">        *a[i]=a[minIndex];</span><br><span class="line">        *a[minIndex]=temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><h3 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h3><p>按下标从左到右访问各元素，确保每次访问元素的左侧是有序的。</p>
+<h3 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h3><ul>
+<li>需要的时间与元素初始顺序有关</li>
+<li>比较次数：N-1~N^2/2</li>
+<li>交换次数：0~N^2/2</li>
+<li>时间复杂度O(n^2)</li>
+</ul>
+<h3 id="实现-1"><a href="#实现-1" class="headerlink" title="实现"></a>实现</h3><ul>
+<li>golang<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Insertion</span><span class="params">(a []*<span class="keyword">int</span>)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> i,_:=<span class="keyword">range</span> a&#123;</span><br><span class="line">        j:=i</span><br><span class="line">        temp := a[i]</span><br><span class="line">        <span class="keyword">for</span> j;j&gt;<span class="number">0</span>&amp;&amp;a[j<span class="number">-1</span>]&gt;temp;j--&#123;</span><br><span class="line">            a[j]=a[j<span class="number">-1</span>]<span class="comment">//将需要交换的数据向右移动，减小时间复杂度(访问数组次数减半)</span></span><br><span class="line">        &#125;</span><br><span class="line">        a[j]=temp</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>C</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Insertion</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> j=i;</span><br><span class="line">        <span class="keyword">for</span>(j;a[j]&gt;a[j<span class="number">-1</span>];j--)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> temp=a[j];</span><br><span class="line">            a[j]=a[j<span class="number">-1</span>];</span><br><span class="line">            a[j<span class="number">-1</span>]=temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h2><p>Shell Sort，基于插入排序的快速的排序算法</p>
+<h3 id="描述-2"><a href="#描述-2" class="headerlink" title="描述"></a>描述</h3><p>将数组分组，将每个子数组排序，逐步缩小子数组中所含元素的个数至1，则排序结束</p>
+<h3 id="实现-2"><a href="#实现-2" class="headerlink" title="实现"></a>实现</h3><ul>
+<li>C<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ShellSort</span><span class="params">(<span class="keyword">int</span> a[]，<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> gap=n/<span class="number">2</span>;gap&gt;<span class="number">0</span>;gap/=<span class="number">2</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//对每个子数组做插入排序</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=gap;i&lt;n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> temp=arr[i];</span><br><span class="line">            <span class="keyword">int</span> j=i;</span><br><span class="line">            <span class="keyword">for</span>(j;j&gt;=gap&amp;&amp;arr[j-gap]&gt;temp;j-=gap)</span><br><span class="line">                arr[j]=arr[j-gap];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>Java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Shell</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(Comparable[] a)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> N =a.length;</span><br><span class="line">        <span class="keyword">int</span> h=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(h&lt;N/<span class="number">3</span>)</span><br><span class="line">            h=<span class="number">3</span>*h+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(h&gt;=<span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=h;i&lt;N;i++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> j=i;j&gt;=h&amp;&amp;a[j]&gt;a[j-h];j-=h)</span><br><span class="line">                    exch(a,j,j-h);<span class="comment">//交换，实现略</span></span><br><span class="line">            &#125;</span><br><span class="line">            h=h/<span class="number">3</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p>Merge Sort</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>采用分治思想，先分后治</p>
+<h3 id="实现-3"><a href="#实现-3" class="headerlink" title="实现"></a>实现</h3><ul>
+<li>C</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> s,<span class="keyword">int</span> m,<span class="keyword">int</span> e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//将a[s:m],a[m+1:e]两有序子列归并为有序</span></span><br><span class="line">    <span class="keyword">int</span> i,j,k;</span><br><span class="line">    <span class="comment">//申请空间存放有序数组</span></span><br><span class="line">    <span class="keyword">int</span> *b=(<span class="keyword">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>)*(e-s+<span class="number">1</span>));</span><br><span class="line">    <span class="keyword">for</span>(i=m+<span class="number">1</span>,k=<span class="number">0</span>,j=s;j&lt;=m&amp;&amp;i&lt;=e;k++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(a[j]&lt;=a[i])</span><br><span class="line">            b[k]=a[j++];</span><br><span class="line">        <span class="keyword">else</span> </span><br><span class="line">            b[k]=a[i++];</span><br><span class="line">    &#125;<span class="comment">//将两各=个有序数组归并</span></span><br><span class="line">    <span class="keyword">while</span>(j&lt;=m)</span><br><span class="line">        b[k++]=a[j++];</span><br><span class="line">    <span class="keyword">while</span>(i&lt;=e)</span><br><span class="line">        b[k++]=a[i++];</span><br><span class="line">    <span class="keyword">for</span>(i=s,k=<span class="number">0</span>;i&lt;=e;i++,k++)</span><br><span class="line">        a[i]=b[k];</span><br><span class="line">    <span class="built_in">free</span>(b);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">msort</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> s,<span class="keyword">int</span> e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//将a[s:e]进行归并排序</span></span><br><span class="line">    <span class="keyword">if</span>(s&lt;e)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//1分为2</span></span><br><span class="line">        <span class="keyword">int</span> m=(s+e)/<span class="number">2</span>;</span><br><span class="line">        msort(a,s,m);</span><br><span class="line">        msort(a,m+<span class="number">1</span>,e);<span class="comment">//递归调用</span></span><br><span class="line">        merge(a,s,m,e);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">mergeSort</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> length)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    msort(a,<span class="number">0</span>,length<span class="number">-1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><h3 id="实现-4"><a href="#实现-4" class="headerlink" title="实现"></a>实现</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">exch</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp=a[a];</span><br><span class="line">    a[a]=a[b];</span><br><span class="line">    a[b]=temp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">partition</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> lo,<span class="keyword">int</span> hi)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> v=a[lo];</span><br><span class="line">    <span class="keyword">int</span> i=lo,j=hi+<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(a[++i]&lt;=v)</span><br><span class="line">            <span class="keyword">if</span>(i==hi)   <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">while</span>(v&lt;=a[--j])</span><br><span class="line">            <span class="keyword">if</span>(j==lo)   <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">if</span>(i&gt;=j)    <span class="keyword">break</span>;</span><br><span class="line">        exch(a,i,j)</span><br><span class="line">    &#125;</span><br><span class="line">    exch(a,lo,j);</span><br><span class="line">    <span class="keyword">return</span> j;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> lo,<span class="keyword">int</span> hi)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(hi&lt;=lo)  <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">int</span> j=partition(a,lo,hi);<span class="comment">//a[lo:j-1]不大于a[j],a[j+1:hi]不小于a[j]</span></span><br><span class="line">    quickSort(a,lo,j<span class="number">-1</span>);</span><br><span class="line">    quickSort(a,j+<span class="number">1</span>,hi);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="zerocath.com/2020/10/26/Linux-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="g(x)">
+      <meta itemprop="description" content="水穷行到处，云起坐看时">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZEROCATH">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/26/Linux-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" class="post-title-link" itemprop="url">Linux--命令行基本用法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-10-26 20:32:24 / 修改时间：20:32:26" itemprop="dateCreated datePublished" datetime="2020-10-26T20:32:24+08:00">2020-10-26</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="zerocath.com/2020/10/20/Golang-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -191,9 +358,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-10-20 15:06:06 / 修改时间：15:06:08" itemprop="dateCreated datePublished" datetime="2020-10-20T15:06:06+08:00">2020-10-20</time>
+              <time title="创建时间：2020-10-20 15:06:06" itemprop="dateCreated datePublished" datetime="2020-10-20T15:06:06+08:00">2020-10-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-10-21 20:33:40" itemprop="dateModified" datetime="2020-10-21T20:33:40+08:00">2020-10-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/NoteBook/" itemprop="url" rel="index"><span itemprop="name">NoteBook</span></a>
+                </span>
             </span>
 
           
@@ -207,7 +389,33 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          <hr>
+<p>参考：<br><a target="_blank" rel="noopener" href="https://studygolang.gitbook.io/learn-go-with-tests">https://studygolang.gitbook.io/learn-go-with-tests</a></p>
+<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><ul>
+<li>声明<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name1, name2, name3 = v1, v2, v3</span><br><span class="line"><span class="keyword">var</span> (</span><br><span class="line">    name1 type1</span><br><span class="line">    name2 type2</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h2 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h2><h3 id="fmt包"><a href="#fmt包" class="headerlink" title="fmt包"></a>fmt包</h3><h3 id="bufio包"><a href="#bufio包" class="headerlink" title="bufio包"></a>bufio包</h3><h3 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h3>Type(Value)<h2 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h2><h3 id="if"><a href="#if" class="headerlink" title="if"></a>if</h3>语法格式：</li>
+</ul>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> 布尔表达式 &#123;</span><br><span class="line">   <span class="comment">/* 在布尔表达式为 true 时执行 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> 布尔表达式 &#123;</span><br><span class="line">   <span class="comment">/* 在布尔表达式为 true 时执行 */</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="comment">/* 在布尔表达式为 false 时执行 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> 布尔表达式<span class="number">1</span> &#123;</span><br><span class="line">   <span class="comment">/* 在布尔表达式1为 true 时执行 */</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> 布尔表达式<span class="number">2</span>&#123;</span><br><span class="line">   <span class="comment">/* 在布尔表达式1为 false ,布尔表达式2为true时执行 */</span></span><br><span class="line">&#125; <span class="keyword">else</span>&#123;</span><br><span class="line">   <span class="comment">/* 在上面两个布尔表达式都为false时，执行*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>示例代码：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">   <span class="comment">/* 定义局部变量 */</span></span><br><span class="line">   <span class="keyword">var</span> a <span class="keyword">int</span> = <span class="number">10</span></span><br><span class="line"> </span><br><span class="line">   <span class="comment">/* 使用 if 语句判断布尔表达式 */</span></span><br><span class="line">   <span class="keyword">if</span> a &lt; <span class="number">20</span> &#123;</span><br><span class="line">       <span class="comment">/* 如果条件为 true 则执行以下语句 */</span></span><br><span class="line">       fmt.Printf(<span class="string">&quot;a 小于 20\n&quot;</span> )</span><br><span class="line">   &#125;</span><br><span class="line">   fmt.Printf(<span class="string">&quot;a 的值为 : %d\n&quot;</span>, a)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>if变体<br>如果其中包含一个可选的语句组件(在评估条件之前执行)，则还有一个变体。它的语法是</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> statement; condition &#123;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> condition&#123;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>示例代码：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (  </span><br><span class="line">    <span class="string">&quot;fmt&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;  </span><br><span class="line">    <span class="keyword">if</span> num := <span class="number">10</span>; num % <span class="number">2</span> == <span class="number">0</span> &#123; <span class="comment">//checks if number is even</span></span><br><span class="line">        fmt.Println(num,<span class="string">&quot;is even&quot;</span>) </span><br><span class="line">    &#125;  <span class="keyword">else</span> &#123;</span><br><span class="line">        fmt.Println(num,<span class="string">&quot;is odd&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>需要注意的是，num的定义在if里，那么只能够在该if..else语句块中使用，否则编译器会报错的。</p>
+</blockquote>
+<h3 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h3><p>go自带break且可同时测多个符合条件的值，如果需要贯通后续的case,则添加fallthrough</p>
+<h3 id="for"><a href="#for" class="headerlink" title="for"></a>for</h3>
       
     </div>
 
@@ -257,7 +465,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-10-19 21:08:20" itemprop="dateModified" datetime="2020-10-19T21:08:20+08:00">2020-10-19</time>
+                <time title="修改时间：2020-10-27 20:18:52" itemprop="dateModified" datetime="2020-10-27T20:18:52+08:00">2020-10-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -298,6 +506,10 @@
 <h2 id="中序"><a href="#中序" class="headerlink" title="中序"></a>中序</h2><h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h3><p>栈实现：根结点非空则先入栈，循环体中，先将左子结点依次入栈至其无左节点;若栈非空，弹出栈顶结点并访问该结点，接着将其右子树作为根遍历</p>
 <h3 id="实现-1"><a href="#实现-1" class="headerlink" title="实现"></a>实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">inOrderTravase</span><span class="params">(BT root)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    BT <span class="built_in">stack</span>[MaxLeng];</span><br><span class="line">    <span class="keyword">int</span> top=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(root)</span><br><span class="line">    &#123;</span><br><span class="line">        temp=root;</span><br><span class="line">        <span class="keyword">do</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">while</span>(temp)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">stack</span>[top++]=temp;</span><br><span class="line">                temp=temp-&gt;left;</span><br><span class="line">            &#125;<span class="comment">//终止循环时，temp=NULL，栈顶的下一个才指向栈顶结点;</span></span><br><span class="line">            <span class="keyword">if</span>(top)<span class="comment">//栈非空</span></span><br><span class="line">            &#123;</span><br><span class="line">                temp=<span class="built_in">stack</span>[--top];</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,temp-&gt;data);</span><br><span class="line">                temp=temp-&gt;right;</span><br><span class="line">            &#125;<span class="comment">//if</span></span><br><span class="line">        &#125;<span class="keyword">while</span>(top||temp)<span class="comment">//do</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="后序"><a href="#后序" class="headerlink" title="后序"></a>后序</h2><h3 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h3><p>将根结点入栈，循环体中：将左子树依次入栈至无左子树,出栈，若有右兄弟结点同样出栈</p>
+<h2 id="二叉树高度"><a href="#二叉树高度" class="headerlink" title="二叉树高度"></a>二叉树高度</h2><ul>
+<li>递归实现</li>
+</ul>
+<p>返回1+左右子树中最高的高度</p>
 
       
     </div>
@@ -626,7 +838,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/09/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">���ݽṹѧϰ�ʼ�</a>
+            <a href="/2020/09/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">??????????</a>
         </h2>
 
         <div class="post-meta">
@@ -643,7 +855,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-10-20 16:28:02" itemprop="dateModified" datetime="2020-10-20T16:28:02+08:00">2020-10-20</time>
+                <time title="修改时间：2020-10-22 14:33:54" itemprop="dateModified" datetime="2020-10-22T14:33:54+08:00">2020-10-22</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -666,179 +878,179 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>�ο���</p>
+          <p>?��???</p>
 <ul>
-<li>���ݽṹ��C���԰�/��ε������ΰ��������������������廪��ѧ�����磬1997.4 </li>
+<li>???????C?????/??��???????????????????????????��????????��1997.4 </li>
 </ul>
-<h1 id="����"><a href="#����" class="headerlink" title="����"></a>����</h1><h2 id="��������"><a href="#��������" class="headerlink" title="��������"></a>��������</h2><ul>
-<li><p>����</p>
-<p>  �����뵽��������������ķ��ŵ��ܳ�</p>
+<h1 id><a href="#" class="headerlink" title="????"></a>????</h1><h2 id="-1"><a href="#-1" class="headerlink" title="????????"></a>????????</h2><ul>
+<li><p>????</p>
+<p>  ????????????????????????????</p>
 </li>
-<li><p>����Ԫ��</p>
+<li><p>???????</p>
 <ul>
-<li>���ݵĻ�����λ</li>
-<li>�����������������<ul>
-<li>��������ݵĲ��ɷָ����С��λ</li>
+<li>??????????��</li>
+<li>?????????????????<ul>
+<li>???????????????????��??��</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>���ݶ���<br>  ������ͬ������Ԫ�صļ��ϣ������ݵ��Ӽ�</p>
+<li><p>???????<br>  ???????????????????????????????</p>
 </li>
-<li><p>���ݽṹ</p>
-<p>  �໥֮�����һ�ֻ�����ض���ϵ������Ԫ�صļ���</p>
+<li><p>?????</p>
+<p>  ??????????????????????????????????</p>
 </li>
 </ul>
-<p>�߼���ϵ/�ṹ��<br>    - ���ϣ��ṹ�е�Ԫ�س���ͬ��һ����������������ϵ<br>    - ���Խṹ������Ԫ�ش���һ����һ���Ĺ�ϵ<br>    - ���νṹ������Ԫ�ؼ����һ���Զ���Ĺ�ϵ<br>    - ͼ/��װ�ṹ������Ԫ�ؼ���ڶ���Զ���Ĺ�ϵ</p>
-<p>�����ṹ/�洢�ṹ�����ݽṹ�ڼ�����еı�ʾ</p>
-<pre><code>- ˳��洢�ṹ������ռ�������eg.������һά����
-- ��ʽ�洢�ṹ����˳�򣬷���ռ䲻һ��������eg.��������ָʾԪ�ش洢��ַ��ָ���ʾ����Ԫ�ؼ���߼���ϵ
-- �������ݽṹ���ø��ӵ���������ʶ�ڵ��ַ,eg.Ŀ¼
-- ��ϣ���ݽṹ/ɢ�нṹ���ɽڵ�Ĺؼ���ֵ�����ڵ�Ĵ洢λ��</code></pre>
+<p>??????/????<br>    - ????????��????????????????????????????<br>    - ?????????????????????????????<br>    - ???��?????????????????????????<br>    - ?/????????????????????????????</p>
+<p>??????/?��????????????????��???</p>
+<pre><code>- ???��????????????????eg.????????????
+- ????��???????????????????????eg.?????????????��?????????????????????????
+- ???????????????????????????????,eg.??
+- ????????/??��?????????????????????����??</code></pre>
 <ul>
-<li><p>�������ͣ�һ��ֵ�ļ��ϺͶ��������ֵ���ϵ�һ��������ܳ�</p>
+<li><p>????????????????????????????????????????????</p>
 <ul>
-<li><p>ԭ������</p>
-<p>  ���ɷֽ�ġ��ǽṹ�ġ�eg.int char</p>
+<li><p>???????</p>
+<p>  ??????????????eg.int char</p>
 </li>
-<li><p>�ṹ����</p>
-<p>  �����ɳɷְ�ĳ�ֽṹ���</p>
+<li><p>??????</p>
+<p>  ????????????????</p>
 </li>
 </ul>
 </li>
-<li><p>������������<br>ADT abstract data type��һ����ѧģ���Լ����������ϵ�һ������������ȡ��������һ���߼����ԣ������ڼ�����ڲ��ı�ʾ�����ʵ���޹ء�</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ADT ��������������&#123;</span><br><span class="line">    ���ݶ���&lt;����&gt;</span><br><span class="line">    ���ݹ�ϵ��&lt;����&gt;</span><br><span class="line">    ����������&lt;����&gt;</span><br><span class="line">&#125;ADT ��������������</span><br><span class="line"></span><br><span class="line">����������&lt;������&gt;</span><br><span class="line">  ��ʼ������&lt;��ʼ��������&gt;</span><br><span class="line">  ���������&lt;�����������&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="�㷨���㷨������"><a href="#�㷨���㷨������" class="headerlink" title="�㷨���㷨������"></a>�㷨���㷨������</h2></li>
-<li><p>�㷨�����ض�������ⲽ���һ������������ָ����������У�����ÿһ��ָ���ʾһ������������</p>
+<li><p>????????????<br>ADT abstract data type???????????????????????????????????????????????????????????????????????????????????????</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ADT ??????????????&#123;</span><br><span class="line">    ???????&lt;????&gt;</span><br><span class="line">    ????????&lt;????&gt;</span><br><span class="line">    ??????????&lt;????&gt;</span><br><span class="line">&#125;ADT ??????????????</span><br><span class="line"></span><br><span class="line">??????????&lt;??????&gt;</span><br><span class="line">  ?????????&lt;???????????&gt;</span><br><span class="line">  ?????????&lt;???????????&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="-2"><a href="#-2" class="headerlink" title="????????????"></a>????????????</h2></li>
+<li><p>???????????????????????????????????????????��???????????????????????????</p>
 <ul>
-<li>�����ԣ�ȷ���ԣ������ԣ����룬���</li>
-<li>���Ҫ����ȷ�ԣ��ɶ��ԣ���׳�ԣ�Ч����ʹ洢������</li>
+<li>???????????????????????????</li>
+<li>????????????????????????��?????��??????</li>
 </ul>
 </li>
-<li><p>�㷨����</p>
-<p>  ʱ�临�Ӷȣ��ռ临�Ӷȣ��ȶ���</p>
-<h1 id="���Ա�"><a href="#���Ա�" class="headerlink" title="���Ա�"></a>���Ա�</h1><h2 id="���Ͷ���"><a href="#���Ͷ���" class="headerlink" title="���Ͷ���"></a>���Ͷ���</h2></li>
-<li><p>��������Ԫ�ؼ������ż��ϵ</p>
+<li><p>??????</p>
+<p>  ??��??????��?????????</p>
+<h1 id="-3"><a href="#-3" class="headerlink" title="?????"></a>?????</h1><h2 id="-4"><a href="#-4" class="headerlink" title="???????"></a>???????</h2></li>
+<li><p>?????????????????????</p>
 </li>
-<li><p>ǰ�������Ԫ��</p>
+<li><p>???????????</p>
 </li>
-<li><p>���Ա����ȣ�Ԫ�صĸ���</p>
-<h2 id="˳���ʾ��ʵ��"><a href="#˳���ʾ��ʵ��" class="headerlink" title="˳���ʾ��ʵ��"></a>˳���ʾ��ʵ��</h2><p>�����Ա�������Ԫ�����δ���ڼ�����洢����һ���ַ�����Ĵ洢��Ԫ�У��õ�˳��洢�ṹ������</p>
+<li><p>?????????????????</p>
+<h2 id="-5"><a href="#-5" class="headerlink" title="??????????"></a>??????????</h2><p>???????????????????��?????????��???????????????��????��???????��????????</p>
 </li>
-<li><p>��̬����</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> maxleng 100</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElemType elem[maxleng];<span class="comment">//�±꣺0,1...,maxleng-1</span></span><br><span class="line">    <span class="keyword">int</span> length;<span class="comment">//����</span></span><br><span class="line">&#125;SqList;<span class="comment">//�ṹ������</span></span><br><span class="line">Sqlist La;<span class="comment">//�ṹ���ͱ�����</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<li><p>???????</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> maxleng 100</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElemType elem[maxleng];<span class="comment">//?��?0,1...,maxleng-1</span></span><br><span class="line">    <span class="keyword">int</span> length;<span class="comment">//????</span></span><br><span class="line">&#125;SqList;<span class="comment">//????????</span></span><br><span class="line">Sqlist La;<span class="comment">//???????????</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <ul>
-<li>ָ�� *,��-&gt;ָ��ṹ�е�Ԫ��</li>
-<li>���ò�������.</li>
+<li>??? *,??-&gt;?????��????</li>
+<li>???��???????.</li>
 </ul>
 </li>
-<li><p>��̬����</p>
+<li><p>???????</p>
 <ul>
-<li><p>���ò���</p>
+<li><p>???��???</p>
 </li>
-<li><p>realloc����</p>
-<p>  extern void *realloc(void *mem_address, unsigned int newsize);#include &lt;stdlib.h&gt; ��Щ��������Ҫ#include &lt;malloc.h&gt;����TC2.0�п���ʹ��alloc.hͷ�ļ�.���жϵ�ǰ��ָ���Ƿ����㹻�������ռ䣬����У�����mem_addressָ��ĵ�ַ�����ҽ�mem_address���أ�����ռ䲻�����Ȱ���newsizeָ���Ĵ�С����ռ䣬��ԭ�����ݴ�ͷ��β�������·�����ڴ����򣬶����ͷ�ԭ��mem_address��ָ�ڴ�����ע�⣺ԭ��ָ�����Զ��ͷţ�����Ҫʹ��free����ͬʱ�����·�����ڴ�������׵�ַ�������·���洢����ĵ�ַ������ֵ��������·���ɹ��򷵻�ָ�򱻷����ڴ��ָ�룬���򷵻ؿ�ָ��NULL��</p>
-</li>
-</ul>
+<li><p>realloc????</p>
+<p>  extern void *realloc(void *mem_address, unsigned int newsize);#include &lt;stdlib.h&gt; ??��?????????#include &lt;malloc.h&gt;????TC2.0?��??????alloc.h????.???��????????????????????????????��?????mem_address?????????????mem_address????????????????????newsize??????��???????????????????��???????��????????????????????mem_address????????????????????????????????????free???????????��???????????????????????��???��??????????????????????��??????????????????????????????NULL??</p>
 </li>
 </ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LIST_INIT_SIZE 100 <span class="comment">//��ʼ����</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LIST_INCRESEMENT 10 <span class="comment">//ÿ�����ӵ�����</span></span></span><br><span class="line">tyedef <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    Elem_Type *elem;<span class="comment">//�洢�ռ�Ļ���ַ</span></span><br><span class="line">    <span class="keyword">int</span> length;<span class="comment">//����</span></span><br><span class="line">    <span class="keyword">int</span> listsize;<span class="comment">//��ǰ����Ĵ洢����</span></span><br><span class="line">&#125; Sqlist1;</span><br><span class="line">Sqlist1 Lb;</span><br><span class="line"><span class="comment">//��������Ա�L</span></span><br><span class="line"><span class="function">Status <span class="title">initList_Sq</span><span class="params">(Sqlist1 &amp;L)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    L.elem = (Elem_Type *)<span class="built_in">malloc</span>(LIST_INIT_SIZE*<span class="keyword">sizeof</span>(Elem_Type));</span><br><span class="line">    <span class="keyword">if</span>(!L.elem)<span class="built_in">exit</span>(OVERFLOW);</span><br><span class="line">    L.length=<span class="number">0</span>;<span class="comment">//�ձ�����Ϊ0</span></span><br><span class="line">    L.listsize=LIST_INIT_SIZE;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">int</span> <span class="title">Insert3</span><span class="params">(SqList &amp;L,<span class="keyword">int</span> i, ElemType e)</span></span></span><br><span class="line"><span class="function">  </span>&#123;<span class="keyword">int</span> j;</span><br><span class="line">   <span class="keyword">if</span> (i&lt;<span class="number">1</span> || i&gt;L.length+<span class="number">1</span>)     <span class="comment">//i�ĺϷ�ȡֵΪ1��n+1</span></span><br><span class="line">          <span class="keyword">return</span> ERROR; </span><br><span class="line">   <span class="keyword">if</span> (L.length&gt;=L.listsize)    <span class="comment">/*���ʱ����*/</span></span><br><span class="line">	  &#123; </span><br><span class="line">     ElemType *newbase;</span><br><span class="line">     newbase=(ElemType *) <span class="built_in">realloc</span>(L.elem,</span><br><span class="line">		(L.listsize+LISTINCREMENT)*<span class="keyword">sizeof</span>(ElemType));</span><br><span class="line">	  <span class="keyword">if</span> (newbase==<span class="literal">NULL</span>) <span class="keyword">return</span> OVERFLOW;   <span class="comment">//����ʧ��</span></span><br><span class="line">     L.elem=newbase;</span><br><span class="line">     L.listsize+=LISTINCREMENT;</span><br><span class="line">	  &#125;</span><br><span class="line"><span class="comment">//����ƶ�Ԫ�أ��ճ���i��Ԫ�صķ���elem[i-1]</span></span><br><span class="line"><span class="keyword">for</span>(j=L.length<span class="number">-1</span>;j&gt;=i<span class="number">-1</span>;j--)</span><br><span class="line">	L.elem[j+<span class="number">1</span>]=L.elem[j];</span><br><span class="line">L.elem[i<span class="number">-1</span>]=e;                   <span class="comment">/*��Ԫ�ز���*/</span></span><br><span class="line">L.length++;                      <span class="comment">/*���Ա����ȼ�1*/</span></span><br><span class="line"><span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="��ʽ��ʾ��ʵ��"><a href="#��ʽ��ʾ��ʵ��" class="headerlink" title="��ʽ��ʾ��ʵ��"></a>��ʽ��ʾ��ʵ��</h2><p>����ͷ���</p>
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LIST_INIT_SIZE 100 <span class="comment">//???????</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LIST_INCRESEMENT 10 <span class="comment">//????????????</span></span></span><br><span class="line">tyedef <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    Elem_Type *elem;<span class="comment">//?��????????</span></span><br><span class="line">    <span class="keyword">int</span> length;<span class="comment">//????</span></span><br><span class="line">    <span class="keyword">int</span> listsize;<span class="comment">//????????��????</span></span><br><span class="line">&#125; Sqlist1;</span><br><span class="line">Sqlist1 Lb;</span><br><span class="line"><span class="comment">//??????????L</span></span><br><span class="line"><span class="function">Status <span class="title">initList_Sq</span><span class="params">(Sqlist1 &amp;L)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    L.elem = (Elem_Type *)<span class="built_in">malloc</span>(LIST_INIT_SIZE*<span class="keyword">sizeof</span>(Elem_Type));</span><br><span class="line">    <span class="keyword">if</span>(!L.elem)<span class="built_in">exit</span>(OVERFLOW);</span><br><span class="line">    L.length=<span class="number">0</span>;<span class="comment">//????????0</span></span><br><span class="line">    L.listsize=LIST_INIT_SIZE;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">int</span> <span class="title">Insert3</span><span class="params">(SqList &amp;L,<span class="keyword">int</span> i, ElemType e)</span></span></span><br><span class="line"><span class="function">  </span>&#123;<span class="keyword">int</span> j;</span><br><span class="line">   <span class="keyword">if</span> (i&lt;<span class="number">1</span> || i&gt;L.length+<span class="number">1</span>)     <span class="comment">//i???????1??n+1</span></span><br><span class="line">          <span class="keyword">return</span> ERROR; </span><br><span class="line">   <span class="keyword">if</span> (L.length&gt;=L.listsize)    <span class="comment">/*????????*/</span></span><br><span class="line">	  &#123; </span><br><span class="line">     ElemType *newbase;</span><br><span class="line">     newbase=(ElemType *) <span class="built_in">realloc</span>(L.elem,</span><br><span class="line">		(L.listsize+LISTINCREMENT)*<span class="keyword">sizeof</span>(ElemType));</span><br><span class="line">	  <span class="keyword">if</span> (newbase==<span class="literal">NULL</span>) <span class="keyword">return</span> OVERFLOW;   <span class="comment">//???????</span></span><br><span class="line">     L.elem=newbase;</span><br><span class="line">     L.listsize+=LISTINCREMENT;</span><br><span class="line">	  &#125;</span><br><span class="line"><span class="comment">//???????????????i?????????elem[i-1]</span></span><br><span class="line"><span class="keyword">for</span>(j=L.length<span class="number">-1</span>;j&gt;=i<span class="number">-1</span>;j--)</span><br><span class="line">	L.elem[j+<span class="number">1</span>]=L.elem[j];</span><br><span class="line">L.elem[i<span class="number">-1</span>]=e;                   <span class="comment">/*????????*/</span></span><br><span class="line">L.length++;                      <span class="comment">/*??????????1*/</span></span><br><span class="line"><span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="-6"><a href="#-6" class="headerlink" title="???????????"></a>???????????</h2><p>????????</p>
 <ul>
-<li>����������<ul>
-<li>�Ƚ��ȳ�</li>
-<li>�Ƚ����</li>
+<li>??????????<ul>
+<li>??????</li>
+<li>??????</li>
 </ul>
 </li>
-<li>��������ȡ</li>
-<li>����������</li>
-<li>������ɾ��</li>
+<li>?????????</li>
+<li>??????????</li>
+<li>?????????</li>
 </ul>
-<h3 id="��̬����"><a href="#��̬����" class="headerlink" title="��̬����"></a>��̬����</h3><h3 id="ѭ������"><a href="#ѭ������" class="headerlink" title="ѭ������"></a>ѭ������</h3><h1 id="ջ�Ͷ���"><a href="#ջ�Ͷ���" class="headerlink" title="ջ�Ͷ���"></a>ջ�Ͷ���</h1><h2 id="ջ"><a href="#ջ" class="headerlink" title="ջ"></a>ջ</h2><ul>
-<li>ֻ�ڱ�β(ջ��top)���в��롢ɾ�����������Ա�</li>
-<li>����ջ<h3 id="��ʽջ"><a href="#��ʽջ" class="headerlink" title="��ʽջ"></a>��ʽջ</h3></li>
-<li>���½����Ϊ�׽�㣬��ջʱɾ���׽��</li>
+<h3 id="-7"><a href="#-7" class="headerlink" title="???????"></a>???????</h3><h3 id="-8"><a href="#-8" class="headerlink" title="???????"></a>???????</h3><h1 id="-9"><a href="#-9" class="headerlink" title="??????"></a>??????</h1><h2 id="-10"><a href="#-10" class="headerlink" title="?"></a>?</h2><ul>
+<li>????��(???top)???��?????????????????</li>
+<li>?????<h3 id="-11"><a href="#-11" class="headerlink" title="????"></a>????</h3></li>
+<li>????????????????????????</li>
 </ul>
-<h3 id="Ӧ��"><a href="#Ӧ��" class="headerlink" title="Ӧ��"></a>Ӧ��</h3><ul>
-<li>����ת��</li>
-<li>����ʽ����ƥ��</li>
-<li>����ʽ��ֵ</li>
+<h3 id="-12"><a href="#-12" class="headerlink" title="???"></a>???</h3><ul>
+<li>???????</li>
+<li>????????????</li>
+<li>????????</li>
 </ul>
-<h2 id="����-1"><a href="#����-1" class="headerlink" title="����"></a>����</h2><ul>
-<li>ֻ�����ڱ���һ��ɾ��Ԫ�أ�����һ�˲���Ԫ��</li>
+<h2 id="-13"><a href="#-13" class="headerlink" title="????"></a>????</h2><ul>
+<li>?????????????????????????????????</li>
 </ul>
-<h1 id="��"><a href="#��" class="headerlink" title="��"></a>��</h1><h1 id="��-1"><a href="#��-1" class="headerlink" title="��"></a>��</h1><h2 id="����-2"><a href="#����-2" class="headerlink" title="����"></a>����</h2><ul>
-<li>���Ķȣ�����������Ŀ</li>
-<li>���Ķȣ��������Ľ��Ķ�</li>
-<li>Ҷ�ӣ���Ϊ0</li>
-<li>��֧��㣺�Ȳ�Ϊ0</li>
-<li>���Ĳ㣺����ڵڼ���</li>
-<li>���ĸ߶ȣ����н������ֵ</li>
+<h1 id="-14"><a href="#-14" class="headerlink" title="??"></a>??</h1><h1 id="-15"><a href="#-15" class="headerlink" title="??"></a>??</h1><h2 id="-16"><a href="#-16" class="headerlink" title="????"></a>????</h2><ul>
+<li>?????????????????</li>
+<li>??????????????????</li>
+<li>???????0</li>
+<li>??????????0</li>
+<li>??????????????</li>
+<li>??????????��???????</li>
 </ul>
-<h3 id="������ʽ"><a href="#������ʽ" class="headerlink" title="������ʽ"></a>������ʽ</h3><ul>
-<li>�����</li>
-<li>Ƕ�׼���</li>
+<h3 id="-17"><a href="#-17" class="headerlink" title="???????"></a>???????</h3><ul>
+<li>?????</li>
+<li>??????</li>
 </ul>
-<h2 id="������"><a href="#������" class="headerlink" title="������"></a>������</h2><h3 id="����-3"><a href="#����-3" class="headerlink" title="����"></a>����</h3><ul>
-<li>��i�������2^(i-1)�����</li>
-<li>��������</li>
-<li>��ȫ������<ul>
-<li>��i����㣬��С����2<em>i,��С����2</em>i+1</li>
-</ul>
-</li>
-</ul>
-<h3 id="����-4"><a href="#����-4" class="headerlink" title="����"></a>����</h3><h4 id="�ݹ�"><a href="#�ݹ�" class="headerlink" title="�ݹ�"></a>�ݹ�</h4><ul>
-<li>ǰ�к���<h4 id="�gݹ�"><a href="#�gݹ�" class="headerlink" title="�ǵݹ�"></a>�ǵݹ�</h4><ul>
-<li>����</li>
+<h2 id="-18"><a href="#-18" class="headerlink" title="??????"></a>??????</h2><h3 id="-19"><a href="#-19" class="headerlink" title="????"></a>????</h3><ul>
+<li>??i???????2^(i-1)?????</li>
+<li>????????</li>
+<li>?????????<ul>
+<li>??i???????��????2<em>i,??��????2</em>i+1</li>
 </ul>
 </li>
 </ul>
-<p>����ָ��ǿ�����ջ��������������������������Ϊ��ʱ������ջ������ٷ������ҽ�㣬���ѭ��</p>
+<h3 id="-20"><a href="#-20" class="headerlink" title="????"></a>????</h3><h4 id="-21"><a href="#-21" class="headerlink" title="???"></a>???</h4><ul>
+<li>??��???<h4 id="-22"><a href="#-22" class="headerlink" title="????"></a>????</h4><ul>
+<li>????</li>
+</ul>
+</li>
+</ul>
+<p>?????????????????????????????????????????????????????????????????????????</p>
 <ul>
-<li>����</li>
+<li>????</li>
 </ul>
-<p>��ָ������ջ��ѭ�����У����ڵ��ջ�������ҽ��ǿ�����ջ��������ڵ�ǿռ�����ջ���ٽ�����һ��ѭ����</p>
+<p>??????????????????��????????????????????????????????????????????????????????????</p>
 <ul>
-<li>����</li>
+<li>????</li>
 </ul>
-<p>������ջ��ѭ�����У��Ƚ���ڵ�ȫ����ջ��1.�����Ϊ��ĸ�������������Һ���ʱ�����ý���ջ������������ֵܣ����ֵ���ջ 2.�����Ϊ�Һ���ʱ��ֱ�ӳ�ջ</p>
-<h3 id="��������-1"><a href="#��������-1" class="headerlink" title="��������"></a>��������</h3><h4 id="�ݹ�-1"><a href="#�ݹ�-1" class="headerlink" title="�ݹ�"></a>�ݹ�</h4><p>���������ı���</p>
-<h4 id="�gݹ�-1"><a href="#�gݹ�-1" class="headerlink" title="�ǵݹ�"></a>�ǵݹ�</h4><ul>
-<li>���ø�����ֵ���������������еı��</li>
+<p>???????????????��????????????????1.???????????????????????????????????????????????????????????? 2.???????????????????</p>
+<h3 id="-23"><a href="#-23" class="headerlink" title="????????"></a>????????</h3><h4 id="-24"><a href="#-24" class="headerlink" title="???"></a>???</h4><p>?????????????</p>
+<h4 id="-25"><a href="#-25" class="headerlink" title="????"></a>????</h4><ul>
+<li>?????????????????????????��???</li>
 </ul>
-<h3 id="����������"><a href="#����������" class="headerlink" title="����������"></a>����������</h3><ul>
-<li>�����������յ���ָ����ָ��ֱ��ǰ�����յ���ָ����ָ��ֱ�Ӻ�̣��ǿ�ָ�벻�䣨ǰ����̰�������������˳�����)</li>
-<li>�洢�ṹ������ͨ��������ȶ������ұ�־</li>
-<li>����������Ҫ��ջ֧��</li>
-</ul>
-<h2 id="��-2"><a href="#��-2" class="headerlink" title="��"></a>��</h2><h3 id="���J洢�u"><a href="#���J洢�u" class="headerlink" title="���Ĵ洢�ṹ"></a>���Ĵ洢�ṹ</h3><ul>
-<li>˫�ױ�ʾ����˳��ṹ��</li>
-<li>���ӱ�ʾ������ʽ�ṹ��<ul>
-<li>����С�̶�</li>
-<li>����С�ǹ̶�����ÿ��������������趨</li>
-<li>����������ʾ����������������ʽ��˳�����ϣ�</li>
-<li>��˫�׵ĺ���������ʾ��</li>
-<li>�����ֵܱ�ʾ������������������<ul>
-<li>��㣺���ֵ��ָ���򣺷ֱ�ָ�����������ֵ�</li>
-</ul>
-</li>
+<h3 id="-26"><a href="#-26" class="headerlink" title="??????????"></a>??????????</h3><ul>
+<li>???????????????????????????????????????????????????????????????????????????????????)</li>
+<li>?��???????????????????????????</li>
+<li>?????????????????<h3 id="-27"><a href="#-27" class="headerlink" title="?????????????????????"></a>?????????????????????</h3></li>
+<li>???+????</li>
+<li>????+????<h2 id="-28"><a href="#-28" class="headerlink" title="??"></a>??</h2><h3 id="��"><a href="#��" class="headerlink" title="????��??"></a>????��??</h3></li>
+<li>???????????????</li>
+<li>?????????????????<ul>
+<li>????��???</li>
+<li>????��???????????????????????څ</li>
+<li>??????????????????????????????????????</li>
+<li>??????????????????</li>
+<li>???????????????????????????<ul>
+<li>??????????????????????????????</li>
 </ul>
 </li>
 </ul>
-<h3 id="�����������ת��"><a href="#�����������ת��" class="headerlink" title="�����������ת��"></a>�����������ת��</h3><h4 id="��ת���ɶ�����"><a href="#��ת���ɶ�����" class="headerlink" title="��ת���ɶ�����"></a>��ת���ɶ�����</h4><ul>
-<li>���ߣ������ֵܽ��֮�����μ��ߣ�</li>
-<li>���ߣ�Ĩȥ�����������������������ӵ�����</li>
-<li>��ת���Ը��ڵ�Ϊ���ģ�����˳ʱ����ת45��<h4 id="������ת������"><a href="#������ת������" class="headerlink" title="������ת������"></a>������ת������</h4></li>
-<li>���ߣ����������������Һ������߷�֧�����е��Һ��Ӷ�������������</li>
-<li>���ߣ�Ĩȥԭ��������˫�����Һ���֮�������</li>
-<li>�����������Ľ�㰴�������</li>
+</li>
 </ul>
-<h4 id="ɭ��ת���ɶ�����"><a href="#ɭ��ת���ɶ�����" class="headerlink" title="ɭ��ת���ɶ�����"></a>ɭ��ת���ɶ�����</h4><ul>
-<li>��ÿ����ת���ɶ�����</li>
-<li>��ÿ�����ڵ���������</li>
-<li>�Ե�һ�����ĸ��ڵ�Ϊ�������ĸ�������Ϊ����˳ʱ����ת���ɶ������ͽṹ</li>
+<h3 id="-29"><a href="#-29" class="headerlink" title="??????????????"></a>??????????????</h3><h4 id="-30"><a href="#-30" class="headerlink" title="????????????"></a>????????????</h4><ul>
+<li>????????????????????��????</li>
+<li>????????????????????????????????????</li>
+<li>????????????????????????????45??<h4 id="-31"><a href="#-31" class="headerlink" title="?????????????"></a>?????????????</h4></li>
+<li>???????????????????????????????????��???????????????????</li>
+<li>??????????????????????????????????</li>
+<li>?????????????????????</li>
 </ul>
-<h4 id="������ת����ɭ��"><a href="#������ת����ɭ��" class="headerlink" title="������ת����ɭ��"></a>������ת����ɭ��</h4><h3 id="���i���"><a href="#���i���" class="headerlink" title="���ı���"></a>���ı���</h3><h4 id="�ȸ�����"><a href="#�ȸ�����" class="headerlink" title="�ȸ�����"></a>�ȸ�����</h4>
+<h4 id="-32"><a href="#-32" class="headerlink" title="?????????????"></a>?????????????</h4><ul>
+<li>?????????????????</li>
+<li>??????????????????</li>
+<li>??????????????????????????????????????????????????????</li>
+</ul>
+<h4 id="-33"><a href="#-33" class="headerlink" title="??????????????"></a>??????????????</h4><h3 id="-34"><a href="#-34" class="headerlink" title="???????"></a>???????</h3><h4 id="-35"><a href="#-35" class="headerlink" title="???????"></a>???????</h4>
       
     </div>
 
@@ -995,7 +1207,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1008,7 +1220,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
