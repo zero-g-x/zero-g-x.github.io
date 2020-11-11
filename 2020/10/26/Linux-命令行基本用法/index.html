@@ -20,16 +20,17 @@
     var CONFIG = {"hostname":"zerocath.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="水穷行到处，云起坐看时">
+  <meta name="description" content="ref:https:&#x2F;&#x2F;www.taniarascia.com&#x2F;how-to-use-the-command-line-for-apple-macos-and-linux&#x2F; command line for macos and linuxsynatxthe terminal usually is: Computer Name : Directory UsernameREADY  computer">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux--命令行基本用法">
 <meta property="og:url" content="zerocath.com/2020/10/26/Linux-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/index.html">
 <meta property="og:site_name" content="ZEROCATH">
-<meta property="og:description" content="水穷行到处，云起坐看时">
+<meta property="og:description" content="ref:https:&#x2F;&#x2F;www.taniarascia.com&#x2F;how-to-use-the-command-line-for-apple-macos-and-linux&#x2F; command line for macos and linuxsynatxthe terminal usually is: Computer Name : Directory UsernameREADY  computer">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-10-26T12:32:24.000Z">
-<meta property="article:modified_time" content="2020-10-26T12:32:26.000Z">
+<meta property="article:modified_time" content="2020-11-11T03:12:44.000Z">
 <meta property="article:author" content="g(x)">
+<meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="zerocath.com/2020/10/26/Linux-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/">
@@ -193,9 +194,24 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-10-26 20:32:24 / 修改时间：20:32:26" itemprop="dateCreated datePublished" datetime="2020-10-26T20:32:24+08:00">2020-10-26</time>
+              <time title="创建时间：2020-10-26 20:32:24" itemprop="dateCreated datePublished" datetime="2020-10-26T20:32:24+08:00">2020-10-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-11 11:12:44" itemprop="dateModified" datetime="2020-11-11T11:12:44+08:00">2020-11-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/NoteBook/" itemprop="url" rel="index"><span itemprop="name">NoteBook</span></a>
+                </span>
             </span>
 
           
@@ -216,7 +232,74 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <p>ref:<br><a target="_blank" rel="noopener" href="https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/">https://www.taniarascia.com/how-to-use-the-command-line-for-apple-macos-and-linux/</a></p>
+<h1 id="command-line-for-macos-and-linux"><a href="#command-line-for-macos-and-linux" class="headerlink" title="command line for macos and linux"></a>command line for macos and linux</h1><h2 id="synatx"><a href="#synatx" class="headerlink" title="synatx"></a>synatx</h2><p>the terminal usually is:</p>
+<p>Computer Name : Directory UsernameREADY</p>
+<ul>
+<li>computer name : name of your computer</li>
+<li>Directory(<del>):directory next to the computer name is the current directory you’re working in,”</del>“ stands for the home directory</li>
+<li>READY$:”$”means the prompt is ready to accept your command.on windows it is represented by “&gt;”</li>
+</ul>
+<h2 id="command"><a href="#command" class="headerlink" title="command"></a>command</h2><ul>
+<li>you can end a command at any point by pressing ctrl+c</li>
+<li>if you quit Terminal,you will end up back in your home directory<h3 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h3></li>
+</ul>
+<p>print working directory,shows where i am at any point<br>    - always remember to type pwb before typing any commands to make sure you know where you are</p>
+<h3 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h3><p>list directory contents,prints the subfiles at where i am</p>
+<h3 id="clear"><a href="#clear" class="headerlink" title="clear"></a>clear</h3><p>clear the terminal screen</p>
+<h3 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h3><p>change directory: move to another directory</p>
+<pre><code>- the terminal will open a directory regardless of whether it is capital or not
+- one dot(.)represents the current directory
+- two dots (..) represent one directory backwards
+- (../..)takes you two directories back</code></pre>
+<h4 id="about-space"><a href="#about-space" class="headerlink" title="about space"></a>about space</h4><p>if the name of the directory you’re about to move to has spaces</p>
+<ul>
+<li>type a ‘&#39; before each space</li>
+<li>use “Directory Name” </li>
+<li>simply type (cd A) and press tab,the shell will assume what you want to type</li>
+</ul>
+<h3 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a>mkdir</h3><p>make directory:create a new directory</p>
+<h3 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h3><p>create a new file,and you can create multiple files at a time</p>
+<h3 id="echo"><a href="#echo" class="headerlink" title="echo"></a>echo</h3><p>create a file with some content</p>
+<p>quickly print text to a file</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$echo &quot;hello world&quot;&gt;hello.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h3><p>view contents of a file</p>
+<h3 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h3><p>remove a file,it will permanently delete the file(won’t send to the Trash bin)</p>
+<p>can remove multiple files at a time</p>
+<h3 id="rm-r"><a href="#rm-r" class="headerlink" title="rm -r"></a>rm -r</h3><p>remove a directory with files</p>
+<h3 id="rmdir"><a href="#rmdir" class="headerlink" title="rmdir"></a>rmdir</h3><p>remove a directory with no files</p>
+<h3 id="cp"><a href="#cp" class="headerlink" title="cp"></a>cp</h3><p>copy and paste files</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cp source destination</span><br></pre></td></tr></table></figure>
+<ul>
+<li>destination can be a directory</li>
+</ul>
+<p>you can also duplicate a file in the same folder</p>
+<h3 id="cp-R"><a href="#cp-R" class="headerlink" title="cp -R"></a>cp -R</h3><p>copy an entire directory</p>
+<h3 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mv source destination</span><br></pre></td></tr></table></figure>
+<p>move(cut and paste)files and directories</p>
+<h3 id="amp-amp"><a href="#amp-amp" class="headerlink" title="&amp;&amp;"></a>&amp;&amp;</h3><p>to run multiple commands</p>
+<h3 id="chmod"><a href="#chmod" class="headerlink" title="chmod"></a>chmod</h3><p>change mode</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ chmod 644 test.html</span><br></pre></td></tr></table></figure>
+<p>644:read and write by owner</p>
+<ul>
+<li><strong>sudo</strong>:Super User DO:</li>
+</ul>
+<p>if you do not have sufficient permissions to perform a task,you can precede a command with sudo to run the command as administrator</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$sudo su &#x2F;&#x2F;log in as the super user</span><br><span class="line">$exit &#x2F;&#x2F;return to the regular account</span><br></pre></td></tr></table></figure>
+
+<h3 id="ssh"><a href="#ssh" class="headerlink" title="ssh"></a>ssh</h3><p>Secure SHell:connect to another computer or server</p>
+<ul>
+<li>using exit to return to your own computer</li>
+</ul>
+<h3 id="whoami"><a href="#whoami" class="headerlink" title="whoami"></a>whoami</h3><p>return the username of your computer</p>
+<h3 id="dig"><a href="#dig" class="headerlink" title="dig"></a>dig</h3><p>DNS Lookup:check the IP address of a given domain when migrating a website</p>
+<h3 id="man"><a href="#man" class="headerlink" title="man"></a>man</h3><p>Manual:check the help guide</p>
+<ul>
+<li>press q to exit the manual pages</li>
+</ul>
+<h3 id="nano"><a href="#nano" class="headerlink" title="nano"></a>nano</h3><p>use nano command to open a file with Nano(a simple text editor)</p>
+
     </div>
 
     
@@ -261,6 +344,9 @@
 
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Linux/" rel="tag"># Linux</a>
+          </div>
 
         
 
@@ -333,6 +419,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#command-line-for-macos-and-linux"><span class="nav-number">1.</span> <span class="nav-text">command line for macos and linux</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#synatx"><span class="nav-number">1.1.</span> <span class="nav-text">synatx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#command"><span class="nav-number">1.2.</span> <span class="nav-text">command</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pwd"><span class="nav-number">1.2.1.</span> <span class="nav-text">pwd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ls"><span class="nav-number">1.2.2.</span> <span class="nav-text">ls</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#clear"><span class="nav-number">1.2.3.</span> <span class="nav-text">clear</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cd"><span class="nav-number">1.2.4.</span> <span class="nav-text">cd</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#about-space"><span class="nav-number">1.2.4.1.</span> <span class="nav-text">about space</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mkdir"><span class="nav-number">1.2.5.</span> <span class="nav-text">mkdir</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#touch"><span class="nav-number">1.2.6.</span> <span class="nav-text">touch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#echo"><span class="nav-number">1.2.7.</span> <span class="nav-text">echo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cat"><span class="nav-number">1.2.8.</span> <span class="nav-text">cat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rm"><span class="nav-number">1.2.9.</span> <span class="nav-text">rm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rm-r"><span class="nav-number">1.2.10.</span> <span class="nav-text">rm -r</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rmdir"><span class="nav-number">1.2.11.</span> <span class="nav-text">rmdir</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cp"><span class="nav-number">1.2.12.</span> <span class="nav-text">cp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cp-R"><span class="nav-number">1.2.13.</span> <span class="nav-text">cp -R</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mv"><span class="nav-number">1.2.14.</span> <span class="nav-text">mv</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#amp-amp"><span class="nav-number">1.2.15.</span> <span class="nav-text">&amp;&amp;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chmod"><span class="nav-number">1.2.16.</span> <span class="nav-text">chmod</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ssh"><span class="nav-number">1.2.17.</span> <span class="nav-text">ssh</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#whoami"><span class="nav-number">1.2.18.</span> <span class="nav-text">whoami</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dig"><span class="nav-number">1.2.19.</span> <span class="nav-text">dig</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#man"><span class="nav-number">1.2.20.</span> <span class="nav-text">man</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nano"><span class="nav-number">1.2.21.</span> <span class="nav-text">nano</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -348,20 +435,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">23</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -382,6 +469,16 @@
   </div>
 
 
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Friends
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.nldxtd.com/" title="https:&#x2F;&#x2F;www.nldxtd.com&#x2F;" rel="noopener" target="_blank">wch's blog</a>
+        </li>
+    </ul>
+  </div>
 
       </div>
 

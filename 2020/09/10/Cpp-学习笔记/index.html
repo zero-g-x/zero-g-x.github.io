@@ -20,23 +20,23 @@
     var CONFIG = {"hostname":"zerocath.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":true,"show_result":false,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="�ο���  C++ Primer���İ棺��5��&#x2F; [��] Stanley B. Lippman &#x2F; [��] Jos��e Lajoie &#x2F; [��] Barbara E. Moo �������գ���޷���.�������������ӹ�ҵ������  �������������û������� ��������    arithmetic type�����������͡���">
+  <meta name="description" content="参考：  C++ Primer中文版：第5版&#x2F; [美] Stanley B. Lippman &#x2F; [美] Josée Lajoie &#x2F; [美] Barbara E. Moo 著：王刚，杨巨峰译.——北京：电子工业出版社  变量和类型内置基本类型 算术类型    arithmetic type————整型、浮点型  空类型   void   指针空指针 用nullptr初始化 用预处理变量NULL，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++ѧϰ�ʼ�">
-<meta property="og:url" content="zerocath.com/2020/09/10/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:title" content="C++学习笔记">
+<meta property="og:url" content="zerocath.com/2020/09/10/Cpp-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="ZEROCATH">
-<meta property="og:description" content="�ο���  C++ Primer���İ棺��5��&#x2F; [��] Stanley B. Lippman &#x2F; [��] Jos��e Lajoie &#x2F; [��] Barbara E. Moo �������գ���޷���.�������������ӹ�ҵ������  �������������û������� ��������    arithmetic type�����������͡���">
+<meta property="og:description" content="参考：  C++ Primer中文版：第5版&#x2F; [美] Stanley B. Lippman &#x2F; [美] Josée Lajoie &#x2F; [美] Barbara E. Moo 著：王刚，杨巨峰译.——北京：电子工业出版社  变量和类型内置基本类型 算术类型    arithmetic type————整型、浮点型  空类型   void   指针空指针 用nullptr初始化 用预处理变量NULL，">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-10T02:44:39.000Z">
-<meta property="article:modified_time" content="2020-10-17T02:58:02.000Z">
+<meta property="article:modified_time" content="2020-11-11T03:19:06.000Z">
 <meta property="article:author" content="g(x)">
+<meta property="article:tag" content="学习笔记">
 <meta property="article:tag" content="Cpp">
-<meta property="article:tag" content="ѧϰ�ʼ�">
-<meta property="article:tag" content="��C����">
-<meta property="article:tag" content="�������">
+<meta property="article:tag" content="面向对象">
+<meta property="article:tag" content="类C语言">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="zerocath.com/2020/09/10/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+<link rel="canonical" href="zerocath.com/2020/09/10/Cpp-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
 
 <script id="page-configurations">
@@ -49,7 +49,7 @@
   };
 </script>
 
-  <title>C++ѧϰ�ʼ� | ZEROCATH</title>
+  <title>C++学习笔记 | ZEROCATH</title>
   
 
 
@@ -175,7 +175,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="zerocath.com/2020/09/10/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+    <link itemprop="mainEntityOfPage" href="zerocath.com/2020/09/10/Cpp-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -188,7 +188,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          C++ѧϰ�ʼ�
+          C++学习笔记
         </h1>
 
         <div class="post-meta">
@@ -205,7 +205,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-10-17 10:58:02" itemprop="dateModified" datetime="2020-10-17T10:58:02+08:00">2020-10-17</time>
+                <time title="修改时间：2020-11-11 11:19:06" itemprop="dateModified" datetime="2020-11-11T11:19:06+08:00">2020-11-11</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -213,7 +213,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%EF%BF%BD%CA%BCDZ%EF%BF%BD/" itemprop="url" rel="index"><span itemprop="name">�ʼǱ�</span></a>
+                  <a href="/categories/%E7%AC%94%E8%AE%B0%E6%9C%AC/" itemprop="url" rel="index"><span itemprop="name">笔记本</span></a>
                 </span>
             </span>
 
@@ -235,148 +235,148 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>�ο���</p>
+        <p>参考：</p>
 <ul>
-<li>C++ Primer���İ棺��5��/ [��] Stanley B. Lippman / [��] Jos��e Lajoie / [��] Barbara E. Moo �������գ���޷���.�������������ӹ�ҵ������</li>
+<li>C++ Primer中文版：第5版/ [美] Stanley B. Lippman / [美] Josée Lajoie / [美] Barbara E. Moo 著：王刚，杨巨峰译.——北京：电子工业出版社</li>
 </ul>
-<h1 id="����������"><a href="#����������" class="headerlink" title="����������"></a>����������</h1><h2 id="���u�������"><a href="#���u�������" class="headerlink" title="���û�������"></a>���û�������</h2><ul>
-<li><p>�������� </p>
-<p>  arithmetic type�����������͡�������</p>
+<h1 id="变量和类型"><a href="#变量和类型" class="headerlink" title="变量和类型"></a>变量和类型</h1><h2 id="内置基本类型"><a href="#内置基本类型" class="headerlink" title="内置基本类型"></a>内置基本类型</h2><ul>
+<li><p>算术类型 </p>
+<p>  arithmetic type————整型、浮点型</p>
 </li>
-<li><p>������</p>
+<li><p>空类型</p>
 <p>  void</p>
 </li>
 </ul>
-<h2 id="ָ��"><a href="#ָ��" class="headerlink" title="ָ��"></a>ָ��</h2><h3 id="��ָ��"><a href="#��ָ��" class="headerlink" title="��ָ��"></a>��ָ��</h3><ul>
-<li>��nullptr��ʼ��</li>
-<li>��Ԥ��������NULL��������ͷ�ļ�cstdlib�У�ֵΪ0(��������)</li>
+<h2 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h2><h3 id="空指针"><a href="#空指针" class="headerlink" title="空指针"></a>空指针</h3><ul>
+<li>用nullptr初始化</li>
+<li>用预处理变量NULL，定义在头文件cstdlib中，值为0(尽量避免)</li>
 </ul>
-<p>ʹ��ʱ���ȫ����ʼ��</p>
+<p>使用时最好全部初始化</p>
 <ul>
-<li>���ñ������Ƕ���һ��������޷�����������ÿ�η��ʶ��ǳ�ʼʱ�Ķ���</li>
-<li>��������һ������ı�������ָ�뱾������һ������</li>
-<li>���ñ����ʼ��������һ�����������þ��޷��ٰ󶨵��������󡣶�ָ�������ڶ���ʱ����ֵ��Ҳ�������¸�ֵ����ָ����������</li>
+<li>引用本身并非对象，一旦定义便无法绑定其他对象，每次访问都是初始时的对象</li>
+<li>引用是另一个对象的别名，而指针本身就是一个对象。</li>
+<li>引用必须初始化，并且一旦定义了引用就无法再绑定到其他对象。而指针无须在定义时赋初值，也可以重新赋值让其指向其他对象。</li>
 </ul>
-<h3 id="void"><a href="#void" class="headerlink" title="void *"></a>void *</h3><p>�����ڴ���������͵�ָ�룬û�����ʿռ��д洢�ı�����������ָ�����ͱ���Ҫ����ָ�����ϸ�ƥ��</p>
-<p>int* p1,p2;����p1��int *,p2��int</p>
-<h2 id="�޶���"><a href="#�޶���" class="headerlink" title="�޶���"></a>�޶���</h2><h3 id="const"><a href="#const" class="headerlink" title="const"></a>const</h3><ul>
-<li>const����һ�������޷��ı䣬��˱����ʼ��</li>
-<li>Ĭ��const����ֻ���ļ�����Ч���������ļ��з��ʡ�������Ҫ��extern����һ��</li>
-<li>const���� </li>
-<li>��ų�������ĵ�ַֻ��ʹ��ָ������ָ��</li>
-<li>����һ��ָ������ָ���ŷǳ����Ķ���</li>
-<li>����ָ������ʼ��������ָ��Ķ����޷��ı�int *const curEE,�������ָ���ֵ������ָ������ֵ</li>
-<li>����const:ָ�뱾���Ǹ�����</li>
-<li>�ײ�const:ָ����ָ�����Ǹ�����</li>
+<h3 id="void"><a href="#void" class="headerlink" title="void *"></a>void *</h3><p>可用于存放任意类型的指针，没法访问空间中存储的变量。而其他指针类型必须要与所指对象严格匹配</p>
+<p>int* p1,p2;——p1是int *,p2是int</p>
+<h2 id="限定符"><a href="#限定符" class="headerlink" title="限定符"></a>限定符</h2><h3 id="const"><a href="#const" class="headerlink" title="const"></a>const</h3><ul>
+<li>const对象一旦创建无法改变，因此必须初始化</li>
+<li>默认const对象只在文件中有效，在其他文件中访问、引用需要加extern声明一次</li>
+<li>const引用 </li>
+<li>存放常量对象的地址只能使用指向常量的指针</li>
+<li>允许一个指向常量的指针存放非常量的对象</li>
+<li>常量指针必须初始化，且其指向的对象无法改变int *const curEE,不变的是指针的值而非其指向对象的值</li>
+<li>顶层const:指针本身是个常量</li>
+<li>底层const:指针所指对象是个常量</li>
 </ul>
-<h3 id="constexpr"><a href="#constexpr" class="headerlink" title="constexpr"></a>constexpr</h3><h3 id="���ͱ���"><a href="#���ͱ���" class="headerlink" title="���ͱ���"></a>���ͱ���</h3><ul>
+<h3 id="constexpr"><a href="#constexpr" class="headerlink" title="constexpr"></a>constexpr</h3><h3 id="类型别名"><a href="#类型别名" class="headerlink" title="类型别名"></a>类型别名</h3><ul>
 <li>typedef</li>
-<li>����������using �����ͱ�����=������������</li>
+<li>别名声明：using 【类型别名】=【类型声明】</li>
 </ul>
-<h3 id="auto"><a href="#auto" class="headerlink" title="auto"></a>auto</h3><p>�����г�ʼֵ</p>
-<h2 id="�ַ���������������"><a href="#�ַ���������������" class="headerlink" title="�ַ���������������"></a>�ַ���������������</h2><h3 id="using����"><a href="#using����" class="headerlink" title="using����"></a>using����</h3><p>using namespace::name</p>
+<h3 id="auto"><a href="#auto" class="headerlink" title="auto"></a>auto</h3><p>必须有初始值</p>
+<h2 id="字符串、向量、数组"><a href="#字符串、向量、数组" class="headerlink" title="字符串、向量、数组"></a>字符串、向量、数组</h2><h3 id="using声明"><a href="#using声明" class="headerlink" title="using声明"></a>using声明</h3><p>using namespace::name</p>
 <ul>
-<li>ÿ�����ֶ���Ҫ������using����</li>
+<li>每个名字都需要独立的using声明</li>
 </ul>
 <h3 id="string"><a href="#string" class="headerlink" title="string"></a>string</h3><ul>
-<li><p>��ʼ��</p>
+<li><p>初始化</p>
 <ul>
-<li><p>ʹ��=��������ʼ��</p>
-<pre><code>��Ҫ������ʱ����</code></pre>
+<li><p>使用=：拷贝初始化</p>
+<pre><code>需要创建临时对象</code></pre>
 </li>
-<li><p>��ʹ��=��ֱ�ӳ�ʼ��</p>
+<li><p>不使用=：直接初始化</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> si;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s2</span><span class="params">(s1)</span></span>;</span><br><span class="line"><span class="built_in">string</span> s2=s1;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s3</span><span class="params">(<span class="string">&quot;abcd&quot;</span>)</span></span>;</span><br><span class="line"><span class="built_in">string</span> s3=<span class="string">&quot;abcd&quot;</span>;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s4</span><span class="params">(<span class="number">10</span>,<span class="string">&#x27;c&#x27;</span>)</span></span>;</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li><p>getline(cin,string_name)</p>
 <ul>
-<li>ÿ�ζ���һ���У�ֱ���������з������յ��ַ����ﲻ�������з�</li>
+<li>每次读入一整行，直到遇到换行符，最终的字符串里不包含换行符</li>
 </ul>
 </li>
 <li><p>string_name.empty()</p>
 <ul>
-<li>�ַ���Ϊ�շ���true,���򷵻�false</li>
+<li>字符串为空返回true,否则返回false</li>
 </ul>
 </li>
 <li><p>string_name.size()</p>
 <ul>
-<li>���ض������ַ��ĸ���</li>
+<li>返回对象中字符的个数</li>
 </ul>
 </li>
-<li><p>string�ɻ��ำֵ</p>
+<li><p>string可互相赋值</p>
 </li>
-<li><p>���ʱ����������һ��������string</p>
+<li><p>相加时必须至少有一个对象是string</p>
 </li>
-<li><p>�ַ�������ֵ��string����ͬһ����</p>
+<li><p>字符串字面值与string不是同一类型</p>
 </li>
-<li><p>����ÿ���ַ�</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (declaration : expression)</span><br><span class="line">    statement</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">str</span><span class="params">(<span class="string">&quot;some string&quot;</span>)</span></span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> c : str)</span><br><span class="line">    ci=out&lt;&lt; c &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s</span><span class="params">(<span class="string">&quot;Hello,World!&quot;</span>)</span></span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> &amp;c : s )<span class="comment">//ע������</span></span><br><span class="line">    c = <span class="built_in">toupper</span>(c);</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s &lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
+<li><p>处理每个字符</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (declaration : expression)</span><br><span class="line">    statement</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">str</span><span class="params">(<span class="string">&quot;some string&quot;</span>)</span></span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> c : str)</span><br><span class="line">    ci=out&lt;&lt; c &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s</span><span class="params">(<span class="string">&quot;Hello,World!&quot;</span>)</span></span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> &amp;c : s )<span class="comment">//注意引用</span></span><br><span class="line">    c = <span class="built_in">toupper</span>(c);</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s &lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
 <h3 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h3></li>
 </ul>
-<p>vector��ģ��������ͣ���vector���ɵ����ͱ����������Ԫ�ص�����</p>
+<p>vector是模板而非类型，由vector生成的类型必须包含其中元素的类型</p>
 <ul>
-<li>push_back<br>  �������±���ʽ�����Ӷ���</li>
+<li>push_back<br>  不能用下标形式来添加对象</li>
 <li>vector<int>::size_type</int></li>
 </ul>
-<h3 id="������"><a href="#������" class="headerlink" title="������"></a>������</h3><ul>
-<li>ʹ�õ�����</li>
+<h3 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h3><ul>
+<li>使用迭代器</li>
 </ul>
 <p>auto b=v.begin()</p>
-<p>e-v.end();//end:β�������</p>
-<p>ûʲôʵ�ʺ��壬��ʾ�Ѿ��������������е�����Ԫ�أ�����ʵ��ָʾĳ��Ԫ��</p>
-<p>������Ϊ�գ�begin��end���ص���ͬһ��������</p>
+<p>e-v.end();//end:尾后迭代器</p>
+<p>没什么实际含义，表示已经处理完了容器中的所有元素，并不实际指示某个元素</p>
+<p>若容器为空，begin和end返回的是同一个迭代器</p>
 <ul>
-<li><p>�����������</p>
+<li><p>迭代器运算符</p>
 <ul>
-<li>��ȣ���������ָ���Ԫ����ͬ����ͬһ������β�������</li>
-<li>��ͨ�������õ���������ȡ����ָʾ��Ԫ��<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s</span><span class="params">(<span class="string">&quot;some strings&quot;</span>)</span></span>;</span><br><span class="line"><span class="keyword">if</span>(s.begin()!=s.end())<span class="comment">//�������ǿ�</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">auto</span> it = s.begin();</span><br><span class="line">    *it = <span class="built_in">toupper</span>(*it);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>相等：两迭代器指向的元素相同或都是同一容器的尾后迭代器</li>
+<li>可通过解引用迭代器来获取其所指示的元素<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s</span><span class="params">(<span class="string">&quot;some strings&quot;</span>)</span></span>;</span><br><span class="line"><span class="keyword">if</span>(s.begin()!=s.end())<span class="comment">//迭代器非空</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">auto</span> it = s.begin();</span><br><span class="line">    *it = <span class="built_in">toupper</span>(*it);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
-<li><p>�ƶ�������</p>
+<li><p>移动迭代器</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> it = s.begin(); it!=s.end() &amp;&amp; !<span class="built_in">isspace</span>(*it);it++)</span><br><span class="line">  *it=<span class="built_in">toupper</span>(*it);</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>����������</p>
+<li><p>迭代器类型</p>
 <ul>
-<li>iterator,const_iterator<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator it;<span class="comment">//�ܶ�д</span></span><br><span class="line"><span class="built_in">string</span>::iterator it2;</span><br><span class="line"></span><br><span class="line"><span class="comment">//ֻ����д</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::const_iterator it3;</span><br><span class="line"><span class="built_in">string</span>::const_iterator it4;</span><br></pre></td></tr></table></figure></li>
-<li>begin,end���صľ��������ɶ����Ƿ��ǳ�������</li>
-<li>cbegin,cend���ܶ���������η��صĶ��ǳ���</li>
+<li>iterator,const_iterator<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator it;<span class="comment">//能读写</span></span><br><span class="line"><span class="built_in">string</span>::iterator it2;</span><br><span class="line"></span><br><span class="line"><span class="comment">//只读不写</span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::const_iterator it3;</span><br><span class="line"><span class="built_in">string</span>::const_iterator it4;</span><br></pre></td></tr></table></figure></li>
+<li>begin,end返回的具体类型由对象是否是常量决定</li>
+<li>cbegin,cend不管对象类型如何返回的都是常量</li>
 </ul>
 </li>
-<li><p>�����úͳ�Ա����</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(*it)empty();<span class="comment">//Բ���űز�����</span></span><br><span class="line"><span class="comment">//��ͷ�����</span></span><br><span class="line">it-&gt;empty();</span><br></pre></td></tr></table></figure></li>
-<li><p>������ʧЧ</p>
+<li><p>解引用和成员访问</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(*it)empty();<span class="comment">//圆括号必不可少</span></span><br><span class="line"><span class="comment">//箭头运算符</span></span><br><span class="line">it-&gt;empty();</span><br></pre></td></tr></table></figure></li>
+<li><p>迭代器失效</p>
 <ul>
-<li>��forѭ������vector��������Ԫ��</li>
-<li>�κ�һ�ֿ��ܸı�vector���������Ĳ�������push_back</li>
-<li>��������ʹ���˵�������ѭ���嶼��Ҫ���������������������Ԫ��</li>
+<li>在for循环中向vector对象添加元素</li>
+<li>任何一种可能改变vector对象容量的操作，如push_back</li>
+<li>！但凡是使用了迭代器的循环体都不要向迭代器所属的容器添加元素</li>
 </ul>
 </li>
-<li><p>����������</p>
+<li><p>迭代器运算</p>
 <ul>
-<li><p>��������</p>
+<li><p>算术运算</p>
 <ul>
-<li>������������ֵ+/-������ֵΪ��ǰ/���ƶ���ĵ�����</li>
-<li>��ϵ������Ƚϣ��Ϸ���ֵ��ͬһ������Ԫ��</li>
-</ul>
-</li>
+<li>迭代器和整数值+/-，返回值为向前/后移动后的迭代器</li>
+<li>关系运算符比较：合法且值向同一容器的元素</li>
 </ul>
 </li>
 </ul>
-<h3 id="����"><a href="#����" class="headerlink" title="����"></a>����</h3><ul>
-<li><p>�������ʼ��</p>
+</li>
+</ul>
+<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><ul>
+<li><p>定义与初始化</p>
 <ul>
-<li>��ʽ��ʼ��������ά�ȱ����ǳ�������ʽ</li>
-<li>����Ԫ��Ϊ���󣬲����ڱ����õ�����</li>
-<li>��������������ֵ </li>
-<li>���������õ�����</li>
+<li>显式初始化，数组维度必须是常量表达式</li>
+<li>数组元素为对象，不存在被引用的数组</li>
+<li>不允许拷贝，赋值 </li>
+<li>不存在引用的数组</li>
 </ul>
 </li>
-<li><p>begin/end����</p>
-<p>��vector���ƣ������鲻�������ͣ���˺������ǳ�Ա������Ӧ��������Ϊ�����</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">10</span>]=&#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> *beg=begin(a);<span class="comment">//��Ԫ��ָ��</span></span><br><span class="line"><span class="keyword">int</span> *last = end(a);<span class="comment">//ָ��βԪ�ص���һλ�õ�ָ��</span></span><br></pre></td></tr></table></figure>
+<li><p>begin/end函数</p>
+<p>与vector类似，但数组不是类类型，因此函数并非成员函数，应将数组作为其参数</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">10</span>]=&#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> *beg=begin(a);<span class="comment">//首元素指针</span></span><br><span class="line"><span class="keyword">int</span> *last = end(a);<span class="comment">//指向尾元素的下一位置的指针</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li>β��ָ�벻��ִ�н����ú͵���</li>
+<li>尾后指针不能执行解引用和递增</li>
 </ul>
 </li>
 </ul>
@@ -415,7 +415,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="/zerocath.com/2020/09/10/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="C++ѧϰ�ʼ�">zerocath.com/2020/09/10/C-学习笔记/</a>
+    <a href="/zerocath.com/2020/09/10/Cpp-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="C++学习笔记">zerocath.com/2020/09/10/Cpp-学习笔记/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -426,10 +426,10 @@
 
       <footer class="post-footer">
           <div class="post-tags">
+              <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"># 学习笔记</a>
               <a href="/tags/Cpp/" rel="tag"># Cpp</a>
-              <a href="/tags/%D1%A7%CF%B0%EF%BF%BD%CA%BC%EF%BF%BD/" rel="tag"># ѧϰ�ʼ�</a>
-              <a href="/tags/%EF%BF%BD%EF%BF%BDC%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD/" rel="tag"># ��C����</a>
-              <a href="/tags/%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD/" rel="tag"># �������</a>
+              <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="tag"># 面向对象</a>
+              <a href="/tags/%E7%B1%BBC%E8%AF%AD%E8%A8%80/" rel="tag"># 类C语言</a>
           </div>
 
         
@@ -503,7 +503,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="nav-number">1.</span> <span class="nav-text">����������</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BDu%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="nav-number">1.1.</span> <span class="nav-text">���û�������</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%D6%B8%EF%BF%BD%EF%BF%BD"><span class="nav-number">1.2.</span> <span class="nav-text">ָ��</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD%D6%B8%EF%BF%BD%EF%BF%BD"><span class="nav-number">1.2.1.</span> <span class="nav-text">��ָ��</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#void"><span class="nav-number">1.2.2.</span> <span class="nav-text">void *</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BF%BD%DE%B6%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="nav-number">1.3.</span> <span class="nav-text">�޶���</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#const"><span class="nav-number">1.3.1.</span> <span class="nav-text">const</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#constexpr"><span class="nav-number">1.3.2.</span> <span class="nav-text">constexpr</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%CD%B1%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="nav-number">1.3.3.</span> <span class="nav-text">���ͱ���</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#auto"><span class="nav-number">1.3.4.</span> <span class="nav-text">auto</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BF%BD%D6%B7%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="nav-number">1.4.</span> <span class="nav-text">�ַ���������������</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#using%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="nav-number">1.4.1.</span> <span class="nav-text">using����</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#string"><span class="nav-number">1.4.2.</span> <span class="nav-text">string</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vector"><span class="nav-number">1.4.3.</span> <span class="nav-text">vector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="nav-number">1.4.4.</span> <span class="nav-text">������</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="nav-number">1.4.5.</span> <span class="nav-text">����</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E5%92%8C%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">变量和类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E7%BD%AE%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.1.</span> <span class="nav-text">内置基本类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E9%92%88"><span class="nav-number">1.2.</span> <span class="nav-text">指针</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A9%BA%E6%8C%87%E9%92%88"><span class="nav-number">1.2.1.</span> <span class="nav-text">空指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#void"><span class="nav-number">1.2.2.</span> <span class="nav-text">void *</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%99%90%E5%AE%9A%E7%AC%A6"><span class="nav-number">1.3.</span> <span class="nav-text">限定符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#const"><span class="nav-number">1.3.1.</span> <span class="nav-text">const</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#constexpr"><span class="nav-number">1.3.2.</span> <span class="nav-text">constexpr</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D"><span class="nav-number">1.3.3.</span> <span class="nav-text">类型别名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#auto"><span class="nav-number">1.3.4.</span> <span class="nav-text">auto</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E3%80%81%E5%90%91%E9%87%8F%E3%80%81%E6%95%B0%E7%BB%84"><span class="nav-number">1.4.</span> <span class="nav-text">字符串、向量、数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#using%E5%A3%B0%E6%98%8E"><span class="nav-number">1.4.1.</span> <span class="nav-text">using声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#string"><span class="nav-number">1.4.2.</span> <span class="nav-text">string</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vector"><span class="nav-number">1.4.3.</span> <span class="nav-text">vector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8"><span class="nav-number">1.4.4.</span> <span class="nav-text">迭代器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E7%BB%84"><span class="nav-number">1.4.5.</span> <span class="nav-text">数组</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -519,20 +519,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">23</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -553,6 +553,16 @@
   </div>
 
 
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Friends
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.nldxtd.com/" title="https:&#x2F;&#x2F;www.nldxtd.com&#x2F;" rel="noopener" target="_blank">wch's blog</a>
+        </li>
+    </ul>
+  </div>
 
       </div>
 
