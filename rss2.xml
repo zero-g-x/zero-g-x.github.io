@@ -9,38 +9,8 @@
     <atom:link href="zerocath.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>水穷行到处，云起坐看时</description>
-    <pubDate>Tue, 03 Nov 2020 16:01:50 GMT</pubDate>
+    <pubDate>Tue, 27 Oct 2020 12:18:44 GMT</pubDate>
     <generator>http://hexo.io/</generator>
-    
-    <item>
-      <title>golang-gin-博客搭建学习记录</title>
-      <link>zerocath.com/2020/11/02/golang-gin-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</link>
-      <guid>zerocath.com/2020/11/02/golang-gin-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</guid>
-      <pubDate>Mon, 02 Nov 2020 08:09:36 GMT</pubDate>
-      
-        
-        
-      <description>&lt;h1 id=&quot;git操作&quot;&gt;&lt;a href=&quot;#git操作&quot; class=&quot;headerlink&quot; title=&quot;git操作&quot;&gt;&lt;/a&gt;git操作&lt;/h1&gt;&lt;h3 id=&quot;将代码提交到分支&quot;&gt;&lt;a href=&quot;#将代码提交到分支&quot; class=&quot;headerlink&quot; titl</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<h1 id="git操作"><a href="#git操作" class="headerlink" title="git操作"></a>git操作</h1><h3 id="将代码提交到分支"><a href="#将代码提交到分支" class="headerlink" title="将代码提交到分支"></a>将代码提交到分支</h3><ul><li>git branch</li><li>git checkout BranchName</li><li>git add .</li><li>git commit -m “…”</li><li>git push</li></ul><h1 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h1><h2 id="Restful-API规范"><a href="#Restful-API规范" class="headerlink" title="Restful API规范"></a>Restful API规范</h2><h3 id="HTTP方法"><a href="#HTTP方法" class="headerlink" title="HTTP方法"></a>HTTP方法</h3><ul><li>GET，表示读取服务器上的资源</li><li>POST，表示在服务器上创建资源</li><li>PUT,表示更新或者替换服务器上的资源</li><li>DELETE，表示删除服务器上的资源</li><li>PATCH，表示更新/修改资源的一部分</li></ul>]]></content:encoded>
-      
-      
-      <category domain="zerocath.com/categories/%E5%B0%8F%E9%A1%B9%E7%9B%AE/">小项目</category>
-      
-      
-      <category domain="zerocath.com/tags/golang/">golang</category>
-      
-      <category domain="zerocath.com/tags/%E5%90%8E%E7%AB%AF/">后端</category>
-      
-      <category domain="zerocath.com/tags/gin/">gin</category>
-      
-      
-      <comments>zerocath.com/2020/11/02/golang-gin-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/#disqus_thread</comments>
-      
-    </item>
     
     <item>
       <title>排序算法</title>
@@ -93,38 +63,6 @@
       
       
       <comments>zerocath.com/2020/10/26/Linux-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Golang:快速入门</title>
-      <link>zerocath.com/2020/10/20/Golang-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</link>
-      <guid>zerocath.com/2020/10/20/Golang-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</guid>
-      <pubDate>Tue, 20 Oct 2020 07:06:06 GMT</pubDate>
-      
-        
-        
-      <description>&lt;hr&gt;
-&lt;p&gt;参考：&lt;br&gt;&lt;a href=&quot;https://studygolang.gitbook.io/learn-go-with-tests&quot;&gt;https://studygolang.gitbook.io/learn-go-with-tests&lt;/a&gt;&lt;/p&gt;
-&lt;h1 i</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<hr><p>参考：<br><a href="https://studygolang.gitbook.io/learn-go-with-tests">https://studygolang.gitbook.io/learn-go-with-tests</a></p><h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><ul><li>声明<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name1, name2, name3 = v1, v2, v3</span><br><span class="line"><span class="keyword">var</span> (</span><br><span class="line">    name1 type1</span><br><span class="line">    name2 type2</span><br><span class="line">)</span><br></pre></td></tr></table></figure><h2 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h2><h3 id="fmt包"><a href="#fmt包" class="headerlink" title="fmt包"></a>fmt包</h3><h3 id="bufio包"><a href="#bufio包" class="headerlink" title="bufio包"></a>bufio包</h3><h3 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h3>Type(Value)<h2 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h2><h3 id="if"><a href="#if" class="headerlink" title="if"></a>if</h3>语法格式：</li></ul><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> 布尔表达式 &#123;</span><br><span class="line">   <span class="comment">/* 在布尔表达式为 true 时执行 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> 布尔表达式 &#123;</span><br><span class="line">   <span class="comment">/* 在布尔表达式为 true 时执行 */</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="comment">/* 在布尔表达式为 false 时执行 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> 布尔表达式<span class="number">1</span> &#123;</span><br><span class="line">   <span class="comment">/* 在布尔表达式1为 true 时执行 */</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> 布尔表达式<span class="number">2</span>&#123;</span><br><span class="line">   <span class="comment">/* 在布尔表达式1为 false ,布尔表达式2为true时执行 */</span></span><br><span class="line">&#125; <span class="keyword">else</span>&#123;</span><br><span class="line">   <span class="comment">/* 在上面两个布尔表达式都为false时，执行*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>示例代码：</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">   <span class="comment">/* 定义局部变量 */</span></span><br><span class="line">   <span class="keyword">var</span> a <span class="keyword">int</span> = <span class="number">10</span></span><br><span class="line"> </span><br><span class="line">   <span class="comment">/* 使用 if 语句判断布尔表达式 */</span></span><br><span class="line">   <span class="keyword">if</span> a &lt; <span class="number">20</span> &#123;</span><br><span class="line">       <span class="comment">/* 如果条件为 true 则执行以下语句 */</span></span><br><span class="line">       fmt.Printf(<span class="string">&quot;a 小于 20\n&quot;</span> )</span><br><span class="line">   &#125;</span><br><span class="line">   fmt.Printf(<span class="string">&quot;a 的值为 : %d\n&quot;</span>, a)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>if变体<br>如果其中包含一个可选的语句组件(在评估条件之前执行)，则还有一个变体。它的语法是</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> statement; condition &#123;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> condition&#123;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>示例代码：</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (  </span><br><span class="line">    <span class="string">&quot;fmt&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;  </span><br><span class="line">    <span class="keyword">if</span> num := <span class="number">10</span>; num % <span class="number">2</span> == <span class="number">0</span> &#123; <span class="comment">//checks if number is even</span></span><br><span class="line">        fmt.Println(num,<span class="string">&quot;is even&quot;</span>) </span><br><span class="line">    &#125;  <span class="keyword">else</span> &#123;</span><br><span class="line">        fmt.Println(num,<span class="string">&quot;is odd&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>需要注意的是，num的定义在if里，那么只能够在该if..else语句块中使用，否则编译器会报错的。</p></blockquote><h3 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h3><p>go自带break且可同时测多个符合条件的值，如果需要贯通后续的case,则添加fallthrough</p><h3 id="for"><a href="#for" class="headerlink" title="for"></a>for</h3>]]></content:encoded>
-      
-      
-      <category domain="zerocath.com/categories/NoteBook/">NoteBook</category>
-      
-      
-      <category domain="zerocath.com/tags/%E9%9D%99%E6%80%81%E8%AF%AD%E8%A8%80/">静态语言</category>
-      
-      <category domain="zerocath.com/tags/%E7%AC%94%E8%AE%B0/">笔记</category>
-      
-      <category domain="zerocath.com/tags/%E5%AD%97%E5%85%B8/">字典</category>
-      
-      
-      <comments>zerocath.com/2020/10/20/Golang-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/#disqus_thread</comments>
       
     </item>
     
